@@ -1,0 +1,19 @@
+{
+  "name": "tttutorialspractice",
+  "version": "1.0.0",
+  "description": "Here i am doing practice of tutorials of professor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hardy91/redesigned-broccoli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hardy91/redesigned-broccoli/issues"
+  },
+  "homepage": "https://github.com/hardy91/redesigned-broccoli#readme"
+}
