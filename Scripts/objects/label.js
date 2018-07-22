@@ -24,6 +24,8 @@ var objects;
                 _this.regX = _this.getMeasuredWidth() * 0.5;
                 _this.regY = _this.getMeasuredHeight() * 0.5;
             }
+            _this.x = x;
+            _this.y = y;
             return _this;
         }
         return Label;
