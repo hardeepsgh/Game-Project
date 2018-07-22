@@ -19,12 +19,12 @@
         // helloLabel.rotation -= 5;
         stage.update();
     }
-    function clickMeButtonMouseOver() {
-        clickMeButton.alpha = 0.7;
-    }
-    function clickMeButtonMouseOut() {
-        clickMeButton.alpha = 1.0;
-    }
+    // function clickMeButtonMouseOver():void{
+    //     clickMeButton.alpha = 0.7;
+    // }
+    // function clickMeButtonMouseOut():void{
+    //     clickMeButton.alpha = 1.0;
+    // }
     function clickMeButtonMouseClick() {
         helloLabel.text = "Clicked";
         helloLabel.regX = helloLabel.getMeasuredWidth() * 0.5;
@@ -40,14 +40,14 @@
         // helloLabel.regX = helloLabel.getMeasuredWidth() *0.5;
         // helloLabel.regY = helloLabel.getMeasuredHeight() *0.5;
         stage.addChild(helloLabel);
-        clickMeButton = new createjs.Bitmap("./Assets/images/clickMeButton.png");
-        clickMeButton.regX = 50;
-        clickMeButton.regY = 50;
-        clickMeButton.x = 320;
-        clickMeButton.y = 340;
+        clickMeButton = new objects.Button("./Assets/images/clickMeButton.png", 320, 340);
+        // clickMeButton.regX  = clickMeButton.getBounds().width * 0.5;
+        // clickMeButton.regY  = clickMeButton.getBounds().height * 0.5;
+        // clickMeButton.x = 320 ;
+        // clickMeButton.y = 340 ;
         stage.addChild(clickMeButton);
-        clickMeButton.on("mouseover", clickMeButtonMouseOver);
-        clickMeButton.on("mouseout", clickMeButtonMouseOut);
+        // clickMeButton.on("mouseover" , clickMeButtonMouseOver);
+        // clickMeButton.on("mouseout" , clickMeButtonMouseOut);
         clickMeButton.on("click", clickMeButtonMouseClick);
     }
     window.onload = Init;
