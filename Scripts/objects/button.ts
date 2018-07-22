@@ -1,0 +1,23 @@
+module objects{
+
+    export class Button extends createjs.Bitmap{
+        // private 
+        //public 
+        // constructor
+        constructor(imagePath : string , x:number = 0 , y:number = 0){
+         super(imagePath);
+         this.x = x ;
+         this.y = y ;
+         this.on("mouseover", this._mouseOver);  
+         this.on("mouseout", this._mouseOut);  
+        }
+        private _mouseOver():void{
+            this.alpha = 0.7
+            
+        }
+        private _mouseOut():void{
+            this.alpha = 1.0;
+            
+        }
+    }
+}
