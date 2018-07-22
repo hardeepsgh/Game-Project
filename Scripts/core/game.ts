@@ -1,3 +1,6 @@
+/// <reference path="_references.ts"/>
+
+//iffi
 (function(){
 
     let canvas = document.getElementById("canvas");
