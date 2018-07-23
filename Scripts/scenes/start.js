@@ -24,8 +24,9 @@ var scenes;
         StartScene.prototype.Init = function () {
         };
         StartScene.prototype.Start = function () {
-            this._welcomeLabel = new objects.Label("Welcome", '60px', "Consolas", "#000000", 320, 420);
+            this._welcomeLabel = new objects.Label("Welcome", '60px', "Consolas", "#000000", 220, 200);
             this._startButton = new objects.Button(this.assetManager, "startButton", 320, 300);
+            this.Main();
         };
         StartScene.prototype.Main = function () {
             this.addChild(this._welcomeLabel);
