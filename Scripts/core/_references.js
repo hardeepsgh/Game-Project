@@ -3,7 +3,10 @@
 /// <reference path="../../Scripts/objects/button.ts"/>
 /// <reference path="../../Scripts/config/scene.ts"/>
 /// <reference path="../../Scripts/objects/scene.ts"/>
+/// <reference path="../../Scripts/math/Vec2.ts"/>
 /// <reference path="../../Scripts/objects/gameobject.ts"/>
+/// <reference path="../../Scripts/config/keys.ts"/>
+/// <reference path="../../Scripts/managers/keyboard.ts"/>
 /// <reference path="../../Scripts/objects/road.ts"/>
 /// <reference path="../../Scripts/objects/car.ts"/>
 /// <reference path="../../Scripts/objects/barrel.ts"/>

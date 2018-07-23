@@ -7,7 +7,8 @@ module scenes{
         private _roadbloack : objects.Roadblock;
         // private
        
-       
+        private _scoreBoard:managers.Scoreboard;
+
 
 
         // constructor 
@@ -25,7 +26,9 @@ module scenes{
            this._car = new objects.Car(this.assetManager);
            this._barrel = new objects.Barrel(this.assetManager);
            this._roadbloack = new objects.Roadblock(this.assetManager);
-            this.Main();
+           objects.Game.scoreboard=new managers.Scoreboard();
+
+           this.Main();
 
         }
         public Main():void{

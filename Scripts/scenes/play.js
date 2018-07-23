@@ -12,7 +12,6 @@ var scenes;
 (function (scenes) {
     var PlayScene = /** @class */ (function (_super) {
         __extends(PlayScene, _super);
-        // private
         // constructor 
         function PlayScene(assetManager) {
             var _this = _super.call(this, assetManager) || this;
@@ -26,6 +25,7 @@ var scenes;
             this._car = new objects.Car(this.assetManager);
             this._barrel = new objects.Barrel(this.assetManager);
             this._roadbloack = new objects.Roadblock(this.assetManager);
+            objects.Game.scoreboard = new managers.Scoreboard();
             this.Main();
         };
         PlayScene.prototype.Main = function () {

@@ -27,7 +27,16 @@ var objects;
         };
         //move objects
         Car.prototype.Move = function () {
-            this.x = objects.Game.stage.mouseX;
+            //Mouse Controls  
+            //  this.x  = objects.Game.stage.mouseX;
+            console.log("move left : " + objects.Game.keyboardManager.moveLeft);
+            //Keyboard Controls
+            if (objects.Game.keyboardManager.moveLeft) {
+                this.x -= 5;
+            }
+            if (objects.Game.keyboardManager.moveRight) {
+                this.x += 5;
+            }
         };
         Car.prototype.CheckBounds = function () {
             if (this.x >= 700 - this.halfWidth) {

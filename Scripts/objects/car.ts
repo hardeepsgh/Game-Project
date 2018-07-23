@@ -16,7 +16,19 @@ module objects{
            }
            //move objects
            public Move():void{
-                this.x  = objects.Game.stage.mouseX;
+            //Mouse Controls  
+            //  this.x  = objects.Game.stage.mouseX;
+
+            
+            console.log("move left : "+objects.Game.keyboardManager.moveLeft);
+            
+            //Keyboard Controls
+            if(objects.Game.keyboardManager.moveLeft)
+            {this.x-=5;}
+
+            if(objects.Game.keyboardManager.moveRight)
+            {this.x+=5;}
+
 
            }
            public CheckBounds():void{

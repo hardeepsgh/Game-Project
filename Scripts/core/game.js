@@ -9,6 +9,7 @@
     var assetManifest;
     var currentScene;
     var currentState;
+    var keyboardManager;
     assetManifest = [
         {
             id: "clickMeButton", src: "./Assets/images/clickMeButton.png"
@@ -44,6 +45,8 @@
         objects.Game.currentScene = config.Scene.START;
         currentState = config.Scene.START;
         objects.Game.assetManager = assetManager;
+        keyboardManager = new managers.Keyboard;
+        objects.Game.keyboardManager = keyboardManager;
         Main();
     }
     function Update() {

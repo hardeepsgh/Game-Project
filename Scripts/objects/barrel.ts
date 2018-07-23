@@ -6,7 +6,7 @@ module objects{
         constructor( assetManager:createjs.LoadQueue ){
             super(assetManager, "barrel");
             this.Start();
-            this.y = 530;
+            this.y = 600;
             this.scaleX = 0.5;
             this.scaleY = 0.5;
            }

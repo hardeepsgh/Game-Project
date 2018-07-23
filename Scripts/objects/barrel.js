@@ -17,7 +17,7 @@ var objects;
         function Barrel(assetManager) {
             var _this = _super.call(this, assetManager, "barrel") || this;
             _this.Start();
-            _this.y = 530;
+            _this.y = 600;
             _this.scaleX = 0.5;
             _this.scaleY = 0.5;
             return _this;
