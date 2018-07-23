@@ -18,6 +18,16 @@
         {        id: "startButton" ,src: "./Assets/images/StartButton.png"},
         {        id: "backButton" ,src: "./Assets/images/BackButton.png"},
         {        id: "nextButton" ,src: "./Assets/images/NextButton.png"},
+        {        id: "road" ,src: "./Assets/images/road.png"},
+        {        id: "car1" ,src: "./Assets/images/car1.png"},
+        {        id: "car2" ,src: "./Assets/images/car2.png"},
+        {        id: "car3" ,src: "./Assets/images/car3.png"},
+        {        id: "car4" ,src: "./Assets/images/car4.png"},
+        {        id: "car5" ,src: "./Assets/images/car5.png"},
+        {        id: "car6" ,src: "./Assets/images/car6.png"},
+        {        id: "barrel" ,src: "./Assets/images/barrel.png"},
+        {        id: "roadblock" ,src: "./Assets/images/roadblock.png"}
+        
     ]
     function Init(){
         console.log("initialization Started");

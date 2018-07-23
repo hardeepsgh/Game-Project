@@ -12,7 +12,6 @@ var scenes;
 (function (scenes) {
     var PlayScene = /** @class */ (function (_super) {
         __extends(PlayScene, _super);
-        // public 
         // private
         // constructor 
         function PlayScene(assetManager) {
@@ -23,11 +22,14 @@ var scenes;
         PlayScene.prototype.Init = function () {
         };
         PlayScene.prototype.Start = function () {
+            this._road = new objects.Road(this.assetManager);
             this.Main();
         };
         PlayScene.prototype.Main = function () {
+            this.addChild(this._road);
         };
         PlayScene.prototype.Update = function () {
+            this._road.Update();
         };
         return PlayScene;
     }(objects.Scene));

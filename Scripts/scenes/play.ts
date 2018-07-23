@@ -1,7 +1,7 @@
 module scenes{
     export class PlayScene extends objects.Scene{
         // public 
-
+        private _road : objects.Road
         // private
        
        
@@ -18,15 +18,15 @@ module scenes{
         }
         
         public Start():void{
-           
+           this._road = new objects.Road(this.assetManager);
             this.Main();
 
         }
         public Main():void{
-           
+           this.addChild(this._road)
         }
         public Update():void{
-           
+           this._road.Update()
         }
         //
     }

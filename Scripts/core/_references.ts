@@ -4,6 +4,8 @@
 /// <reference path="../../Scripts/config/scene.ts"/>
 /// <reference path="../../Scripts/objects/scene.ts"/>
 
+/// <reference path="../../Scripts/objects/road.ts"/>
+
 
 
 /// <reference path="../../Scripts/scenes/over.ts"/>
