@@ -17,9 +17,9 @@ var objects;
         function Car(assetManager) {
             var _this = _super.call(this, assetManager, "car") || this;
             _this.Start();
-            _this.y = 430;
-            _this.scaleX = 0.5;
-            _this.scaleY = 0.5;
+            _this.y = 540;
+            _this.scaleX = 0.4;
+            _this.scaleY = 0.4;
             return _this;
         }
         // recet object location

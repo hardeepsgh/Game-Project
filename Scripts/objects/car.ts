@@ -6,9 +6,9 @@ module objects{
         constructor( assetManager:createjs.LoadQueue ){
             super(assetManager, "car");
             this.Start();
-            this.y = 430;
-            this.scaleX = 0.5;
-            this.scaleY = 0.5;
+            this.y = 540;
+            this.scaleX = 0.4;
+            this.scaleY = 0.4;
            }
            // recet object location
            public Reset():void{

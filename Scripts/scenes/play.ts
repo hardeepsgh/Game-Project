@@ -32,19 +32,7 @@ module scenes{
             if((this._barrel.x - this._roadbloack.x > -50 || this._barrel.x - this._roadbloack.x < 50 )&&
                 (this._barrel.y - this._roadbloack.y > -50 || this._barrel.y - this._roadbloack.y < 50)) {
 
-                   let mean:any =  (this._barrel.x + this._roadbloack.x)/2;
-                    if ( this._barrel.x < mean ){
-                            this._barrel.x = this._barrel.x -50;
-
-                    }      else{
-                        this._barrel.x = this._barrel.x +50;
-                    }
-                    if ( this._roadbloack.x < mean ){
-                        this._roadbloack.x = this._roadbloack.x -50;
-
-                }      else{
-                    this._roadbloack.x = this._roadbloack.x +50;
-                }
+               this._barrel.y = this._barrel.y - 100;
                 }        
             
             
