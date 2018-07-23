@@ -7,6 +7,8 @@ module objects{
             super(assetManager, "car");
             this.Start();
             this.y = 430;
+            this.scaleX = 0.5;
+            this.scaleY = 0.5;
            }
            // recet object location
            public Reset():void{
@@ -18,7 +20,13 @@ module objects{
 
            }
            public CheckBounds():void{
-            
+                if(this.x >= 700 - this.halfWidth){
+                    this.x = 700- this.halfWidth;
+                }
+
+                if(this.x <= this.halfWidth+145){
+                        this.x = 145+this.halfWidth;
+                }
            }
            //init var create new object
            public Start():void{

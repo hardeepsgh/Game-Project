@@ -18,6 +18,8 @@ var objects;
             var _this = _super.call(this, assetManager, "car") || this;
             _this.Start();
             _this.y = 430;
+            _this.scaleX = 0.5;
+            _this.scaleY = 0.5;
             return _this;
         }
         // recet object location
@@ -28,6 +30,12 @@ var objects;
             this.x = objects.Game.stage.mouseX;
         };
         Car.prototype.CheckBounds = function () {
+            if (this.x >= 700 - this.halfWidth) {
+                this.x = 700 - this.halfWidth;
+            }
+            if (this.x <= this.halfWidth + 145) {
+                this.x = 145 + this.halfWidth;
+            }
         };
         //init var create new object
         Car.prototype.Start = function () {
