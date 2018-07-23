@@ -5,7 +5,7 @@ module scenes{
         // private
         private _welcomeLabel :objects.Label;
         private _startButton :objects.Button;
-        private _startButotnClick() :void{
+        private _startButtonClick() :void{
             objects.Game.currentScene =config.Scene.PLAY;
         }
 
@@ -21,8 +21,8 @@ module scenes{
         }
         
         public Start():void{
-            this._welcomeLabel = new objects.Label("Welcome", '60px',"Consolas","#000000",320, 420);
-            this._startButton = new objects.Button(this.assetManager,"startButton",320, 300);
+            this._welcomeLabel = new objects.Label("Welcome", '60px',"Consolas","#000000",220, 220);
+            this._startButton = new objects.Button(this.assetManager,"startButton",270, 300);
             this.Main();
 
         }
@@ -30,10 +30,10 @@ module scenes{
             this.addChild(this._welcomeLabel);   
 
             this.addChild(this._startButton);
-            this._startButton.on("click",this._startButotnClick)
+            this._startButton.on("click",this._startButtonClick)
         }
-        public Update():number{
-            return objects.Game.currentScene;
+        public Update():void{
+           
         }
         //
     }

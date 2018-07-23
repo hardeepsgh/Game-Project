@@ -8,13 +8,14 @@
     var assetManager;
     var assetManifest;
     var currentScene;
+    var currentState;
     assetManifest = [
         {
             id: "clickMeButton", src: "./Assets/images/clickMeButton.png"
         },
-        {
-            id: "startButton", src: "./Assets/images/StartButton.png"
-        }
+        { id: "startButton", src: "./Assets/images/StartButton.png" },
+        { id: "backButton", src: "./Assets/images/BackButton.png" },
+        { id: "nextButton", src: "./Assets/images/NextButton.png" },
     ];
     function Init() {
         console.log("initialization Started");
@@ -31,14 +32,15 @@
         createjs.Ticker.framerate = 60;
         createjs.Ticker.on("tick", Update);
         objects.Game.currentScene = config.Scene.START;
+        currentState = config.Scene.START;
         Main();
     }
     function Update() {
         // helloLabel.rotation -= 5;
-        if (currentScene.Update() != objects.Game.currentScene) {
-            console.log(objects.Game.currentScene);
+        if (currentState != objects.Game.currentScene) {
             Main();
         }
+        currentScene.Update();
         stage.update();
     }
     // function clickMeButtonMouseOver():void{
@@ -54,19 +56,22 @@
         clickMeButton.alpha = 1.0;
     }
     function Main() {
+        stage.removeAllChildren();
         switch (objects.Game.currentScene) {
             case config.Scene.START:
                 {
-                    stage.removeAllChildren();
                     currentScene = new scenes.StartScene(assetManager);
-                    stage.addChild(currentScene);
                 }
                 break;
             case config.Scene.PLAY:
+                currentScene = new scenes.PlayScene(assetManager);
                 break;
             case config.Scene.OVER:
+                currentScene = new scenes.OverScene(assetManager);
                 break;
         }
+        currentState = objects.Game.currentScene;
+        stage.addChild(currentScene);
         // console.log("Game Starting ");
         // helloLabel = new objects.Label("Hello,World " , "40px", "Consolas" , "#000000", 320,240,true);
         // console.log(helloLabel);

@@ -18,8 +18,8 @@ module objects{
         public Start():void{
 
         }
-        public Update():number{
-            return 0 ;
+        public Update():void{
+            
         }
        
     }

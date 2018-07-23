@@ -25,7 +25,6 @@ var objects;
         Scene.prototype.Start = function () {
         };
         Scene.prototype.Update = function () {
-            return 0;
         };
         return Scene;
     }(createjs.Container));

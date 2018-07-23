@@ -10,33 +10,33 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var scenes;
 (function (scenes) {
-    var StartScene = /** @class */ (function (_super) {
-        __extends(StartScene, _super);
+    var OverScene = /** @class */ (function (_super) {
+        __extends(OverScene, _super);
         // constructor 
-        function StartScene(assetManager) {
+        function OverScene(assetManager) {
             var _this = _super.call(this, assetManager) || this;
             _this.Start();
             return _this;
         }
-        StartScene.prototype._startButtonClick = function () {
+        OverScene.prototype._backButtonClick = function () {
             objects.Game.currentScene = config.Scene.PLAY;
         };
-        StartScene.prototype.Init = function () {
+        OverScene.prototype.Init = function () {
         };
-        StartScene.prototype.Start = function () {
-            this._welcomeLabel = new objects.Label("Welcome", '60px', "Consolas", "#000000", 220, 220);
-            this._startButton = new objects.Button(this.assetManager, "startButton", 270, 300);
+        OverScene.prototype.Start = function () {
+            this._overLabel = new objects.Label("Game over", '40px', "Consolas", "#000000", 220, 180);
+            this._backButton = new objects.Button(this.assetManager, "backButton", 270, 300);
             this.Main();
         };
-        StartScene.prototype.Main = function () {
-            this.addChild(this._welcomeLabel);
-            this.addChild(this._startButton);
-            this._startButton.on("click", this._startButtonClick);
+        OverScene.prototype.Main = function () {
+            this.addChild(this._overLabel);
+            this.addChild(this._backButton);
+            this._backButton.on("click", this._backButtonClick);
         };
-        StartScene.prototype.Update = function () {
+        OverScene.prototype.Update = function () {
         };
-        return StartScene;
+        return OverScene;
     }(objects.Scene));
-    scenes.StartScene = StartScene;
+    scenes.OverScene = OverScene;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=start.js.map
+//# sourceMappingURL=over.js.map
