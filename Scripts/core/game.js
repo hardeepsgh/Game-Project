@@ -5,8 +5,19 @@
     var stage;
     var helloLabel;
     var clickMeButton;
+    var assetManager;
+    var assetManifest;
+    assetManifest = [
+        {
+            id: "clickMeButton", src: "./Assets/images/clickMeButton.png"
+        }
+    ];
     function Init() {
         console.log("initialization Started");
+        assetManager = new createjs.LoadQueue();
+        assetManager.installPlugin(createjs.Sound);
+        assetManager.loadManifest(assetManifest);
+        assetManager.on("complete", Start, this);
         Start();
     }
     function Start() {
@@ -42,7 +53,7 @@
         // helloLabel.regX = helloLabel.getMeasuredWidth() *0.5;
         // helloLabel.regY = helloLabel.getMeasuredHeight() *0.5;
         stage.addChild(helloLabel);
-        clickMeButton = new objects.Button("./Assets/images/clickMeButton.png", 320, 340);
+        clickMeButton = new objects.Button(assetManager, "clickMeButton", 320, 340);
         // clickMeButton.regX  = clickMeButton.getBounds().width * 0.5;
         // clickMeButton.regY  = clickMeButton.getBounds().height * 0.5;
         // clickMeButton.x = 320 ;
