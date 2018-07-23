@@ -9,6 +9,7 @@
 /// <reference path="../../Scripts/objects/road.ts"/>
 /// <reference path="../../Scripts/objects/car.ts"/>
 /// <reference path="../../Scripts/objects/barrel.ts"/>
+/// <reference path="../../Scripts/objects/roadblock.ts"/>
 
 
 /// <reference path="../../Scripts/scenes/over.ts"/>
