@@ -24,15 +24,18 @@ var scenes;
         PlayScene.prototype.Start = function () {
             this._road = new objects.Road(this.assetManager);
             this._car = new objects.Car(this.assetManager);
+            this._barrel = new objects.Barrel(this.assetManager);
             this.Main();
         };
         PlayScene.prototype.Main = function () {
             this.addChild(this._road);
+            this.addChild(this._barrel);
             this.addChild(this._car);
         };
         PlayScene.prototype.Update = function () {
             this._road.Update();
             this._car.Update();
+            this._barrel.Update();
         };
         return PlayScene;
     }(objects.Scene));
