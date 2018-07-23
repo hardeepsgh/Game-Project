@@ -17,7 +17,7 @@
         { id: "backButton", src: "./Assets/images/BackButton.png" },
         { id: "nextButton", src: "./Assets/images/NextButton.png" },
         { id: "road", src: "./Assets/images/road.png" },
-        { id: "car1", src: "./Assets/images/car1.png" },
+        { id: "car", src: "./Assets/images/car1.png" },
         { id: "car2", src: "./Assets/images/car2.png" },
         { id: "car3", src: "./Assets/images/car3.png" },
         { id: "car4", src: "./Assets/images/car4.png" },
