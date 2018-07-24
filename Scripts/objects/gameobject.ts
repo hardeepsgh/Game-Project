@@ -12,7 +12,12 @@
          public isColliding :boolean;
          
 
-         // construct 
+         /**
+          *Creates an instance of GameObject.
+          * @param {createjs.LoadQueue} assetManager
+          * @param {string} imageString
+          * @memberof GameObject
+          */
          constructor( assetManager:createjs.LoadQueue,  imageString : string ){
              super(assetManager.getResult( imageString));
              this.name  = imageString;
@@ -23,6 +28,12 @@
             
            }
          //private
+         /**
+          *
+          *
+          * @private
+          * @memberof GameObject
+          */
          private _initialize():void{
                   this.width = this.getBounds().width;
                   this.height = this.getBounds().height;
@@ -33,9 +44,15 @@
                 this.isColliding = false ;
          }
          // public
+         /**
+          *
+          *
+          * @memberof GameObject
+          */
          public Start():void{
 
          }
+         
          public Update():void{
 
          }

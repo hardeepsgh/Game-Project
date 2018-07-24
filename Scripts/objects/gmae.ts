@@ -1,4 +1,10 @@
 module objects{
+    /**
+     *
+     *
+     * @export
+     * @class Game
+     */
     export class Game{
         public static stage : createjs.Stage;
         public static assetManager : createjs.LoadQueue

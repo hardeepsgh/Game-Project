@@ -1,5 +1,11 @@
 module managers
 {
+    /**
+     *
+     *
+     * @export
+     * @class Keyboard
+     */
     export class Keyboard
     {
         //private instance variable 
@@ -13,7 +19,10 @@ module managers
         public paused:boolean;
         
 
-        //constructors 
+        /**
+         *Creates an instance of Keyboard.
+         * @memberof Keyboard
+         */
         constructor()
         {
             this.enabled=true;
@@ -21,6 +30,12 @@ module managers
             document.addEventListener('keyup',this.onKeyUp.bind(this),false);
         }
         //public methods 
+        /**
+         *
+         *
+         * @param {KeyboardEvent} event
+         * @memberof Keyboard
+         */
         public onKeyDown(event:KeyboardEvent) :void
         {
         switch(event.keyCode){
@@ -50,8 +65,13 @@ module managers
 
         }
         }
-
-        public onKeyUp(event:KeyboardEvent) :void
+/**
+ *
+ *
+ * @param {KeyboardEvent} event
+ * @memberof Keyboard
+ */
+public onKeyUp(event:KeyboardEvent) :void
         {
             
             switch(event.keyCode){

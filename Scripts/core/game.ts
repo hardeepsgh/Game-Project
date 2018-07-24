@@ -1,6 +1,7 @@
 /// <reference path="_references.ts"/>
 
 //iffi
+
 (function(){
 
     let canvas = document.getElementById("canvas");
@@ -30,6 +31,10 @@
         {        id: "roadblock" ,src: "./Assets/images/roadblock.png"}
         
     ]
+    /**
+     *initialize
+     *
+     */
     function Init(){
         console.log("initialization Started");
         assetManager  =  new createjs.LoadQueue();
@@ -39,6 +44,10 @@
         Start();
         
     }
+    /**
+     *
+     *Start application
+     */
     function Start():void{
         console.log("Starting Application");
         stage =  new createjs.Stage(canvas);
@@ -57,6 +66,10 @@
         
         Main();
     }
+    /**
+     *
+     *update  scene 
+     */
     function Update():void{
         // helloLabel.rotation -= 5;
 
@@ -76,6 +89,11 @@
     //     clickMeButton.alpha = 1.0;
 
     // }
+    
+    /**
+     *
+     * Button to be clicked
+     */
     function clickMeButtonMouseClick():void{
         helloLabel.text = "Clicked";
         helloLabel.regX = helloLabel.getMeasuredWidth() * 0.5 ;
@@ -84,6 +102,11 @@
         clickMeButton.alpha = 1.0;
 
     }
+
+    /**
+     *main method to be called for running game 
+     *
+     */
     function Main():void{
         stage.removeAllChildren();
         switch(objects.Game.currentScene){

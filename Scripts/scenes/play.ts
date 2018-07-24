@@ -12,16 +12,28 @@ module scenes{
 
 
 
-        // constructor 
+        /**
+         *Creates an instance of PlayScene.
+         * @param {createjs.LoadQueue} assetManager
+         * @memberof PlayScene
+         */
         constructor(assetManager: createjs.LoadQueue){
             super(assetManager);
             this.Start();
         }
-
-        public Init():void{
+/**
+ *
+ *
+ * @memberof PlayScene
+ */
+public Init():void{
             
         }
-        
+        /**
+         *
+         *
+         * @memberof PlayScene
+         */
         public Start():void{
            this._road = new objects.Road(this.assetManager);
            this._car = new objects.Car(this.assetManager);
@@ -33,10 +45,20 @@ module scenes{
            this.Main();
 
         }
+        /**
+         *
+         *
+         * @memberof PlayScene
+         */
         public addObstacles():void
         {
 
         }
+        /**
+         *
+         *
+         * @memberof PlayScene
+         */
         public Main():void{
             if((this._barrel.x - this._roadbloack.x > -50 || this._barrel.x - this._roadbloack.x < 50 )&&
                 (this._barrel.y - this._roadbloack.y > -50 || this._barrel.y - this._roadbloack.y < 50)) {
@@ -57,6 +79,11 @@ module scenes{
 
 
         }
+        /**
+         *
+         *
+         * @memberof PlayScene
+         */
         public Update():void{
            this._road.Update()
            this._car.Update()

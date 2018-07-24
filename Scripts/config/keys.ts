@@ -1,4 +1,10 @@
 module config{
+    /**
+     *
+     *
+     * @export
+     * @class Keys
+     */
     export class Keys
     {
         //arrow keys 

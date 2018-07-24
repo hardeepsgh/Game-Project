@@ -5,13 +5,22 @@ module scenes{
         // private
         private _overLabel :objects.Label;
         private _backButton :objects.Button;
-      
-        private _backButtonClick() :void{
+      /**
+       *
+       *
+       * @private
+       * @memberof OverScene
+       */
+      private _backButtonClick() :void{
             objects.Game.currentScene =config.Scene.PLAY;
         }
 
 
-        // constructor 
+        /**
+         *Creates an instance of OverScene.
+         * @param {createjs.LoadQueue} assetManager
+         * @memberof OverScene
+         */
         constructor(assetManager: createjs.LoadQueue){
             super(assetManager);
             this.Start();
