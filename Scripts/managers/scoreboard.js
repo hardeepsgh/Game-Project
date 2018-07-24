@@ -23,7 +23,7 @@ var managers;
             },
             set: function (newScore) {
                 this._scores = newScore;
-                this.ScoreLabel.text = "Lives :" + this._scores;
+                this.ScoreLabel.text = "Scores :" + this._scores;
             },
             enumerable: true,
             configurable: true
@@ -43,6 +43,8 @@ var managers;
             this.LiveLabel = new objects.Label("Lives : 0", "20px", "Consolas", "#FFFF00", 10, 10, false);
             this.ScoreLabel = new objects.Label("Score : 99999", "20px", "Consolas", "#FFFF00", 500, 10, false);
             this.HighScoreLabel = new objects.Label("High Score : 99999", "40px", "Consolas", "#FFFF00", 320, 240, false);
+            this.Lives = 5;
+            this.Score = 9999;
         };
         return Scoreboard;
     }());

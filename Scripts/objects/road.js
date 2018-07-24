@@ -33,7 +33,7 @@ var objects;
         };
         //init var create new object
         Road.prototype.Start = function () {
-            this._dy = 5;
+            this._dy = 2;
             this._reset();
         };
         Road.prototype.Update = function () {

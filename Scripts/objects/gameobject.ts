@@ -9,6 +9,7 @@
          public height :number;
          public halfWidth:number;
          public halfHeight :number;
+         public isColliding :boolean;
          
 
          // construct 
@@ -29,6 +30,7 @@
                 this.halfHeight = this.height * 0.5;
                 this.regX = this.halfWidth;
                 this.regY = this.halfHeight;
+                this.isColliding = false ;
          }
          // public
          public Start():void{

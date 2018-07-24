@@ -44,7 +44,7 @@ var objects;
         };
         //init var create new object
         Barrel.prototype.Start = function () {
-            this._dy = 5;
+            this._dy = 2;
         };
         Barrel.prototype.Update = function () {
             this.Move();

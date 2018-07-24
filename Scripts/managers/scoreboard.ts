@@ -27,7 +27,7 @@ module managers{
         set Score(newScore:number)
         {
             this._scores=newScore;
-            this.ScoreLabel.text="Lives :"+this._scores;
+            this.ScoreLabel.text="Scores :"+this._scores;
         }
         get HighScore():number{
             return this._highScore;            
@@ -51,8 +51,12 @@ module managers{
             this.ScoreLabel=new objects.Label("Score : 99999","20px","Consolas","#FFFF00",500,10,false);
             this.HighScoreLabel=new objects.Label("High Score : 99999","40px","Consolas","#FFFF00",320,240,false);
 
+            this.Lives=5;
+            this.Score=9999;
+
         } 
 
         
     }
 }
+

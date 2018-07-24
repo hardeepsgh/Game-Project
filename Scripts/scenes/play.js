@@ -24,32 +24,37 @@ var scenes;
             this._road = new objects.Road(this.assetManager);
             this._car = new objects.Car(this.assetManager);
             this._barrel = new objects.Barrel(this.assetManager);
-            this._barrel1 = new objects.Barrel(this.assetManager);
             this._roadbloack = new objects.Roadblock(this.assetManager);
-            this._roadbloack1 = new objects.Roadblock(this.assetManager);
-            objects.Game.scoreboard = new managers.Scoreboard();
+            this._scoreBoard = new managers.Scoreboard();
+            objects.Game.scoreboard = this._scoreBoard;
             this.Main();
         };
+        PlayScene.prototype.addObstacles = function () {
+        };
         PlayScene.prototype.Main = function () {
-            if (Math.abs(this._barrel.x - this._roadbloack.x) < 50) {
-                this._barrel.y = this._barrel.y - 150;
+            if ((this._barrel.x - this._roadbloack.x > -50 || this._barrel.x - this._roadbloack.x < 50) &&
+                (this._barrel.y - this._roadbloack.y > -50 || this._barrel.y - this._roadbloack.y < 50)) {
+                this._barrel.y = this._barrel.y - 100;
             }
-            this._barrel.y = this._barrel1.y - 300;
-            this._roadbloack1.y = this._roadbloack.y - 200;
             this.addChild(this._road);
-            this.addChild(this._barrel);
-            this.addChild(this._barrel1);
-            this.addChild(this._roadbloack);
-            this.addChild(this._roadbloack1);
             this.addChild(this._car);
+            this.addChild(this._scoreBoard.LiveLabel);
+            this.addChild(this._scoreBoard.ScoreLabel);
+            this.addChild(this._barrel);
+            this.addChild(this._roadbloack);
         };
         PlayScene.prototype.Update = function () {
             this._road.Update();
             this._car.Update();
             this._barrel.Update();
-            this._barrel1.Update();
+            //check collision between car and barrel
+            managers.Collision.Check(this._car, this._barrel);
             this._roadbloack.Update();
-            this._roadbloack1.Update();
+            //check collision between car and roadBlock
+            managers.Collision.Check(this._car, this._roadbloack);
+            if (this._scoreBoard.Lives <= 0) {
+                objects.Game.currentScene = config.Scene.OVER;
+            }
         };
         return PlayScene;
     }(objects.Scene));

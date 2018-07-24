@@ -25,7 +25,7 @@ module objects{
            }
            //init var create new object
            public Start():void{
-            this._dy = 5;
+            this._dy = 2;
             this._reset();
            }
            public Update():void{
