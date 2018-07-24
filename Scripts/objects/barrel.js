@@ -18,14 +18,17 @@ var objects;
             var _this = _super.call(this, assetManager, "barrel") || this;
             _this.Start();
             _this.y = 600;
-            _this.scaleX = 0.5;
-            _this.scaleY = 0.5;
+            _this.scaleX = 0.4;
+            _this.scaleY = 0.4;
             return _this;
         }
         // recet object location
         Barrel.prototype.Reset = function () {
-            this.x = Math.floor((Math.random() * (840 - this.width)) + this.halfWidth);
+            this.x = this.x = (this.randomInt(0, 3) * 125) + 230;
             this.y = -this.height;
+        };
+        Barrel.prototype.randomInt = function (min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
         };
         //move objects
         Barrel.prototype.Move = function () {

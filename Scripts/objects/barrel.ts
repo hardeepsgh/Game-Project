@@ -7,14 +7,17 @@ module objects{
             super(assetManager, "barrel");
             this.Start();
             this.y = 600;
-            this.scaleX = 0.5;
-            this.scaleY = 0.5;
+            this.scaleX = 0.4;
+            this.scaleY = 0.4;
            }
            // recet object location
            public Reset():void{
-               this.x = Math.floor((Math.random()* (840-this.width))+this.halfWidth);
+               this.x =  this.x  =  (this.randomInt(0,3)*125 )+230;
                this.y =-this.height;
            }
+
+           private randomInt(min, max){
+            return Math.floor(Math.random() * (max - min + 1)) + min;}
            //move objects
            public Move():void{
                this.y  +=  this._dy; 

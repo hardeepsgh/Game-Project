@@ -17,15 +17,19 @@ var objects;
         function Roadblock(assetManager) {
             var _this = _super.call(this, assetManager, "roadblock") || this;
             _this.Start();
-            _this.y = 530;
-            _this.scaleX = 0.5;
-            _this.scaleY = 0.5;
+            _this.y = 600;
+            _this.scaleX = 0.7;
+            _this.scaleY = 0.3;
             return _this;
         }
         // recet object location
         Roadblock.prototype.Reset = function () {
-            this.x = Math.floor((Math.random() * (840 - this.width)) + this.halfWidth);
-            this.y = -this.height + 150;
+            // this.x = Math.floor((Math.random()* (840-this.width))+this.halfWidth);
+            this.y = -this.height;
+            this.x = (this.randomInt(0, 3) * 125) + 230;
+        };
+        Roadblock.prototype.randomInt = function (min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
         };
         //move objects
         Roadblock.prototype.Move = function () {
