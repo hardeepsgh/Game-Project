@@ -28,13 +28,14 @@ var scenes;
         };
         StartScene.prototype.Start = function () {
             this._welcomeLabel = new objects.Label("Lane Steer", '70px', "Consolas", "#FF0000", 200, 70);
-            this._startButton = new objects.Button(this.assetManager, "startButton", 650, 100);
+            this._startButton = new objects.Button(this.assetManager, "startButton", 620, 100);
             this._welcomeImage = new createjs.Bitmap(this.assetManager.getResult("welcomeImage"));
             // this._welcomeImage.scaleX=1.4;
             // this._welcomeImage.scaleY=1.5;
             this._welcomeImage.scaleX = 0.68;
             this._welcomeImage.scaleY = 0.8;
-            this._instructionButton = new objects.Button(this.assetManager, "InstructionButton", 650, 200);
+            this._settingButton = new objects.Button(this.assetManager, "SettingButton", 620, 170);
+            this._instructionButton = new objects.Button(this.assetManager, "InstructionButton", 620, 240);
             this.Main();
         };
         StartScene.prototype.Main = function () {
@@ -42,13 +43,16 @@ var scenes;
             this.addChild(this._welcomeLabel);
             this.addChild(this._startButton);
             this.addChild(this._instructionButton);
+            this.addChild(this._settingButton);
             this._startButton.on("click", this._startButtonClick);
             this._instructionButton.on("click", function () {
                 objects.Game.currentScene = config.Scene.INSTRUCTION;
             }, this);
+            this._settingButton.on("click", function () {
+                objects.Game.currentScene = config.Scene.SETTINGS;
+            }, this);
         };
         StartScene.prototype.Update = function () {
-            // this._welcomeLabel.Update(this);
         };
         return StartScene;
     }(objects.Scene));

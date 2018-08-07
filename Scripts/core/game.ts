@@ -31,6 +31,7 @@
         {        id: "car5" ,src: "./Assets/images/car5.png"},
         {        id: "car6" ,src: "./Assets/images/car6.png"},
         {        id: "barrel" ,src: "./Assets/images/barrel.png"},
+        {        id: "SettingButton",src:"./Assets/images/SettingButton.png"},
         {        id: "roadblock" ,src: "./Assets/images/roadblock.png"}
         
     ]
@@ -130,6 +131,9 @@
             break;
             case config.Scene.INSTRUCTION:
                 currentScene = new scenes.Instructions(assetManager);
+            break;
+            case config.Scene.SETTINGS:
+            currentScene = new scenes.Settings(assetManager);
             break;
         }
         currentState= objects.Game.currentScene;

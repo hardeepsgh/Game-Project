@@ -26,5 +26,5 @@
 /// <reference path="../../Scripts/scenes/play.ts"/>
 /// <reference path="../../Scripts/scenes/start.ts"/>
 /// <reference path="../../Scripts/scenes/instructions.ts"/>
-
+/// <reference path="../../Scripts/scenes/settings.ts"/>
 

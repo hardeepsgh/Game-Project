@@ -5,6 +5,7 @@ module config{
         START,
         PLAY,
         OVER,
-        INSTRUCTION
+        INSTRUCTION,
+        SETTINGS
     }
 }
