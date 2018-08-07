@@ -11,8 +11,9 @@ module objects {
             super(assetManager, "car");
             this.Start();
             this.y = 540;
-            this.scaleX = 0.4;
-            this.scaleY = 0.4;
+            this.x = 200;
+          //  this.scaleX = 0.4;
+           // this.scaleY = 0.4;
         }
         // recet object location
         /**

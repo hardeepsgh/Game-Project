@@ -1,15 +1,35 @@
 var managers;
 (function (managers) {
+    /**
+     *
+     *
+     * @export
+     * @class Scoreboard
+     */
     var Scoreboard = /** @class */ (function () {
-        //constructor
+        /**
+         *Creates an instance of Scoreboard.
+         * @memberof Scoreboard
+         */
         function Scoreboard() {
             this._initialize();
         }
         Object.defineProperty(Scoreboard.prototype, "Lives", {
             //public properties
+            /**
+             *
+             *
+             * @type {number}
+             * @memberof Scoreboard
+             */
             get: function () {
                 return this._lives;
             },
+            /**
+             *
+             *
+             * @memberof Scoreboard
+             */
             set: function (newLives) {
                 this._lives = newLives;
                 this.LiveLabel.text = "Lives :" + this._lives;
@@ -21,6 +41,11 @@ var managers;
             get: function () {
                 return this._scores;
             },
+            /**
+             *
+             *
+             * @memberof Scoreboard
+             */
             set: function (newScore) {
                 this._scores = newScore;
                 this.ScoreLabel.text = "Scores :" + this._scores;
@@ -32,6 +57,11 @@ var managers;
             get: function () {
                 return this._highScore;
             },
+            /**
+             *
+             *
+             * @memberof Scoreboard
+             */
             set: function (newHighScore) {
                 this._highScore = newHighScore;
                 this.HighScoreLabel.text = "High Score :" + this._highScore;
@@ -39,6 +69,12 @@ var managers;
             enumerable: true,
             configurable: true
         });
+        /**
+         *
+         *
+         * @private
+         * @memberof Scoreboard
+         */
         Scoreboard.prototype._initialize = function () {
             this.LiveLabel = new objects.Label("Lives : 0", "20px", "Consolas", "#FFFF00", 10, 10, false);
             this.ScoreLabel = new objects.Label("Score : 99999", "20px", "Consolas", "#FFFF00", 500, 10, false);

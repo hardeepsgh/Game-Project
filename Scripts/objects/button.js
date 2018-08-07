@@ -15,6 +15,14 @@ var objects;
         // private 
         //public 
         // constructor
+        /**
+         *Creates an instance of Button.
+         * @param {createjs.LoadQueue} assetManager
+         * @param {string} imageString
+         * @param {number} [x=0]
+         * @param {number} [y=0]
+         * @memberof Button
+         */
         function Button(assetManager, imageString, x, y) {
             if (x === void 0) { x = 0; }
             if (y === void 0) { y = 0; }
@@ -27,9 +35,21 @@ var objects;
             _this.on("mouseout", _this._mouseOut);
             return _this;
         }
+        /**
+         *
+         *
+         * @private
+         * @memberof Button
+         */
         Button.prototype._mouseOver = function () {
             this.alpha = 0.7;
         };
+        /**
+         *
+         *
+         * @private
+         * @memberof Button
+         */
         Button.prototype._mouseOut = function () {
             this.alpha = 1.0;
         };

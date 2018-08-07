@@ -15,6 +15,17 @@ var objects;
         // Private Instace variables 
         //public properties 
         //Constructor
+        /**
+         *Creates an instance of Label.
+         * @param {string} labelString
+         * @param {string} fontSize
+         * @param {string} fontFamily
+         * @param {string} fontColour
+         * @param {number} [x=0]
+         * @param {number} [y=0]
+         * @param {boolean} [isCentered=false]
+         * @memberof Label
+         */
         function Label(labelString, fontSize, fontFamily, fontColour, x, y, isCentered) {
             if (x === void 0) { x = 0; }
             if (y === void 0) { y = 0; }

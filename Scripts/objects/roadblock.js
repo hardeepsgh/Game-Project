@@ -18,9 +18,10 @@ var objects;
             var _this = _super.call(this, assetManager, "roadblock") || this;
             _this.Start();
             _this.y = 600;
-            _this.scaleX = 0.7;
-            _this.scaleY = 0.3;
+            _this.x = (_this.randomInt(0, 3) * 125) + 230;
             return _this;
+            // this.scaleX = 0.7;
+            // this.scaleY = 0.3;
         }
         // recet object location
         Roadblock.prototype.Reset = function () {
@@ -31,10 +32,19 @@ var objects;
         Roadblock.prototype.randomInt = function (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
         };
-        //move objects
+        /**
+         *
+         *
+         * @memberof Roadblock
+         */
         Roadblock.prototype.Move = function () {
             this.y += this._dy;
         };
+        /**
+         *
+         *
+         * @memberof Roadblock
+         */
         Roadblock.prototype.CheckBounds = function () {
             if (this.y >= 700 - this.height) {
                 this.Reset();

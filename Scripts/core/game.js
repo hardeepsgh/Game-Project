@@ -27,6 +27,10 @@
         { id: "barrel", src: "./Assets/images/barrel.png" },
         { id: "roadblock", src: "./Assets/images/roadblock.png" }
     ];
+    /**
+     *initialize
+     *
+     */
     function Init() {
         console.log("initialization Started");
         assetManager = new createjs.LoadQueue();
@@ -35,6 +39,10 @@
         assetManager.on("complete", Start, this);
         Start();
     }
+    /**
+     *
+     *Start application
+     */
     function Start() {
         console.log("Starting Application");
         stage = new createjs.Stage(canvas);
@@ -49,6 +57,10 @@
         objects.Game.keyboardManager = keyboardManager;
         Main();
     }
+    /**
+     *
+     *update  scene
+     */
     function Update() {
         // helloLabel.rotation -= 5;
         if (currentState != objects.Game.currentScene) {
@@ -63,12 +75,20 @@
     // function clickMeButtonMouseOut():void{
     //     clickMeButton.alpha = 1.0;
     // }
+    /**
+     *
+     * Button to be clicked
+     */
     function clickMeButtonMouseClick() {
         helloLabel.text = "Clicked";
         helloLabel.regX = helloLabel.getMeasuredWidth() * 0.5;
         helloLabel.regY = helloLabel.getMeasuredHeight() * 0.5;
         clickMeButton.alpha = 1.0;
     }
+    /**
+     *main method to be called for running game
+     *
+     */
     function Main() {
         stage.removeAllChildren();
         switch (objects.Game.currentScene) {

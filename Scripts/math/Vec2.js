@@ -14,6 +14,12 @@ var math;
         __extends(Vec2, _super);
         // member variables
         // constructors
+        /**
+         *Creates an instance of Vec2.
+         * @param {number} [x=0]
+         * @param {number} [y=0]
+         * @memberof Vec2
+         */
         function Vec2(x, y) {
             if (x === void 0) { x = 0; }
             if (y === void 0) { y = 0; }

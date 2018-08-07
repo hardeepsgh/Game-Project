@@ -9,7 +9,8 @@ module objects{
          * @param {createjs.LoadQueue} assetManager
          * @memberof Scene
          */
-        constructor(assetManager:createjs.LoadQueue){
+        constructor(assetManager:createjs.LoadQueue)
+        {
             super();
             this.assetManager = assetManager;
         }

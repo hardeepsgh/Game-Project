@@ -14,26 +14,56 @@ var objects;
         __extends(Barrel, _super);
         // private
         // public
+        /**
+         *Creates an instance of Barrel.
+         * @param {createjs.LoadQueue} assetManager
+         * @memberof Barrel
+         */
         function Barrel(assetManager) {
             var _this = _super.call(this, assetManager, "barrel") || this;
             _this.Start();
             _this.y = 600;
-            _this.scaleX = 0.4;
-            _this.scaleY = 0.4;
+            _this.x = (_this.randomInt(0, 3) * 125) + 230;
             return _this;
+            //  this.scaleX = 0.4;
+            //  this.scaleY = 0.4;
         }
         // recet object location
+        /**
+         *
+         *
+         * @memberof Barrel
+         */
         Barrel.prototype.Reset = function () {
             this.x = this.x = (this.randomInt(0, 3) * 125) + 230;
             this.y = -this.height;
         };
+        /**
+         *
+         *
+         * @private
+         * @param {*} min
+         * @param {*} max
+         * @returns
+         * @memberof Barrel
+         */
         Barrel.prototype.randomInt = function (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
         };
         //move objects
+        /**
+         *
+         *
+         * @memberof Barrel
+         */
         Barrel.prototype.Move = function () {
             this.y += this._dy;
         };
+        /**
+         *
+         *
+         * @memberof Barrel
+         */
         Barrel.prototype.CheckBounds = function () {
             if (this.y >= 700 - this.height) {
                 this.Reset();
@@ -43,6 +73,11 @@ var objects;
             }
         };
         //init var create new object
+        /**
+         *
+         *
+         * @memberof Barrel
+         */
         Barrel.prototype.Start = function () {
             this._dy = 2;
         };

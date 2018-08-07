@@ -12,7 +12,12 @@ var objects;
 (function (objects) {
     var GameObject = /** @class */ (function (_super) {
         __extends(GameObject, _super);
-        // construct 
+        /**
+         *Creates an instance of GameObject.
+         * @param {createjs.LoadQueue} assetManager
+         * @param {string} imageString
+         * @memberof GameObject
+         */
         function GameObject(assetManager, imageString) {
             var _this = _super.call(this, assetManager.getResult(imageString)) || this;
             _this.name = imageString;
@@ -22,6 +27,12 @@ var objects;
             //  this.regY = this.getBounds().height * 0.5
         }
         //private
+        /**
+         *
+         *
+         * @private
+         * @memberof GameObject
+         */
         GameObject.prototype._initialize = function () {
             this.width = this.getBounds().width;
             this.height = this.getBounds().height;
@@ -32,6 +43,11 @@ var objects;
             this.isColliding = false;
         };
         // public
+        /**
+         *
+         *
+         * @memberof GameObject
+         */
         GameObject.prototype.Start = function () {
         };
         GameObject.prototype.Update = function () {

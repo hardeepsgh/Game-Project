@@ -1,5 +1,11 @@
 var config;
 (function (config) {
+    /**
+     *
+     *
+     * @export
+     * @class Keys
+     */
     var Keys = /** @class */ (function () {
         function Keys() {
         }

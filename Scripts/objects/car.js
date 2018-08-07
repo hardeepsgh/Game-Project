@@ -14,18 +14,34 @@ var objects;
         __extends(Car, _super);
         // private
         // public
+        /**
+         *Creates an instance of Car.
+         * @param {createjs.LoadQueue} assetManager
+         * @memberof Car
+         */
         function Car(assetManager) {
             var _this = _super.call(this, assetManager, "car") || this;
             _this.Start();
             _this.y = 540;
-            _this.scaleX = 0.4;
-            _this.scaleY = 0.4;
+            _this.x = 200;
             return _this;
+            //  this.scaleX = 0.4;
+            // this.scaleY = 0.4;
         }
         // recet object location
+        /**
+         *
+         *
+         * @memberof Car
+         */
         Car.prototype.Reset = function () {
         };
         //move objects
+        /**
+         *
+         *
+         * @memberof Car
+         */
         Car.prototype.Move = function () {
             //Mouse Controls  
             //  this.x  = objects.Game.stage.mouseX;
@@ -38,6 +54,11 @@ var objects;
                 this.x += 5;
             }
         };
+        /**
+         *
+         *
+         * @memberof Car
+         */
         Car.prototype.CheckBounds = function () {
             if (this.x >= 700 - this.halfWidth) {
                 this.x = 700 - this.halfWidth;
@@ -47,6 +68,11 @@ var objects;
             }
         };
         //init var create new object
+        /**
+         *
+         *
+         * @memberof Car
+         */
         Car.prototype.Start = function () {
         };
         Car.prototype.Update = function () {

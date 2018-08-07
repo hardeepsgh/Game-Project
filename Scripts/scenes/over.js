@@ -12,12 +12,22 @@ var scenes;
 (function (scenes) {
     var OverScene = /** @class */ (function (_super) {
         __extends(OverScene, _super);
-        // constructor 
+        /**
+         *Creates an instance of OverScene.
+         * @param {createjs.LoadQueue} assetManager
+         * @memberof OverScene
+         */
         function OverScene(assetManager) {
             var _this = _super.call(this, assetManager) || this;
             _this.Start();
             return _this;
         }
+        /**
+         *
+         *
+         * @private
+         * @memberof OverScene
+         */
         OverScene.prototype._backButtonClick = function () {
             objects.Game.currentScene = config.Scene.PLAY;
         };

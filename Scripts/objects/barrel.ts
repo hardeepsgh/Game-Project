@@ -11,8 +11,9 @@ module objects {
             super(assetManager, "barrel");
             this.Start();
             this.y = 600;
-            this.scaleX = 0.4;
-            this.scaleY = 0.4;
+            this.x =  (this.randomInt(0, 3) * 125) + 230;
+          //  this.scaleX = 0.4;
+          //  this.scaleY = 0.4;
         }
         // recet object location
         /**

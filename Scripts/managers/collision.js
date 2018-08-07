@@ -3,6 +3,21 @@ var managers;
     var Collision = /** @class */ (function () {
         function Collision() {
         }
+        /**
+         *
+         *
+         * @static
+         * @param {objects.GameObject} object1
+         * @param {objects.GameObject} object2
+         * @memberof Collision
+        /**
+         *
+         *
+         * @static
+         * @param {objects.GameObject} object1
+         * @param {objects.GameObject} object2
+         * @memberof Collision
+         */
         Collision.Check = function (object1, object2) {
             var P1 = new math.Vec2(object1.x, object1.y);
             var P2 = new math.Vec2(object2.x, object2.y);

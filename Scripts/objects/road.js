@@ -13,29 +13,59 @@ var objects;
     var Road = /** @class */ (function (_super) {
         __extends(Road, _super);
         // public
+        /**
+         *Creates an instance of Road.
+         * @param {createjs.LoadQueue} assetManager
+         * @memberof Road
+         */
         function Road(assetManager) {
             var _this = _super.call(this, assetManager.getResult("road")) || this;
             _this.Start();
             return _this;
         }
         // recet object location
+        /**
+         *
+         *
+         * @private
+         * @memberof Road
+         */
         Road.prototype._reset = function () {
             this.y = -1452;
         };
-        //move objects
+        /**
+         *
+         *
+         * @memberof Road
+         */
         Road.prototype._move = function () {
             this.y += this._dy;
         };
+        /**
+         *
+         *
+         * @memberof Road
+         */
         Road.prototype._checkBounds = function () {
             if (this.y >= 0) {
                 this._reset();
             }
         };
         //init var create new object
+        /**
+         *
+         *
+         * @memberof Road
+         */
         Road.prototype.Start = function () {
             this._dy = 2;
             this._reset();
         };
+        /**
+         *
+         *
+         * @memberof Road
+         */
         Road.prototype.Update = function () {
             this._move();
             this._checkBounds();

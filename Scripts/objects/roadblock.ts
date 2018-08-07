@@ -7,8 +7,9 @@ module objects {
             super(assetManager, "roadblock");
             this.Start();
             this.y = 600;
-            this.scaleX = 0.7;
-            this.scaleY = 0.3;
+            this.x =  (this.randomInt(0, 3) * 125) + 230;
+           // this.scaleX = 0.7;
+           // this.scaleY = 0.3;
         }
         // recet object location
         public Reset(): void {
