@@ -16,7 +16,9 @@
         },
         { id: "startButton", src: "./Assets/images/StartButton.png" },
         { id: "backButton", src: "./Assets/images/BackButton.png" },
+        { id: "InstructionButton", src: "./Assets/images/instructions.png" },
         { id: "nextButton", src: "./Assets/images/NextButton.png" },
+        { id: "welcomeImage", src: "./Assets/images/mainImage.jpg" },
         { id: "road", src: "./Assets/images/road.png" },
         { id: "car", src: "./Assets/images/car1.png" },
         { id: "car2", src: "./Assets/images/car2.png" },
@@ -102,6 +104,9 @@
                 break;
             case config.Scene.OVER:
                 currentScene = new scenes.OverScene(assetManager);
+                break;
+            case config.Scene.INSTRUCTION:
+                currentScene = new scenes.Instructions(assetManager);
                 break;
         }
         currentState = objects.Game.currentScene;

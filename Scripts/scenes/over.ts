@@ -5,6 +5,8 @@ module scenes{
         // private
         private _overLabel :objects.Label;
         private _backButton :objects.Button;
+        private _lastImage: createjs.Bitmap;
+
       /**
        *
        *
@@ -12,7 +14,7 @@ module scenes{
        * @memberof OverScene
        */
       private _backButtonClick() :void{
-            objects.Game.currentScene =config.Scene.PLAY;
+            objects.Game.currentScene =config.Scene.START;
         }
 
 
@@ -31,12 +33,16 @@ module scenes{
         }
         
         public Start():void{
-            this._overLabel = new objects.Label("Game over", '40px',"Consolas","#000000",220, 180);            
-            this._backButton = new objects.Button(this.assetManager,"backButton",270, 300);
+            this._overLabel = new objects.Label("Game over", '60px',"Consolas","#FF0000",250, 100);            
+            this._backButton = new objects.Button(this.assetManager,"backButton",650, 100);
+            this._lastImage=new createjs.Bitmap(this.assetManager.getResult("welcomeImage"));
+            this._lastImage.scaleX=0.68;
+            this._lastImage.scaleY=0.8;
             this.Main();
 
         }
         public Main():void{
+            this.addChild(this._lastImage);
             this.addChild(this._overLabel);   
 
       
