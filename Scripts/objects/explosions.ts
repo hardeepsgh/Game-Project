@@ -1,7 +1,7 @@
 module objects {
-    export class Road extends createjs.Bitmap {
+    export class Explosion extends createjs.Bitmap {
         // private
-        public _dy: number;
+        private _dy: number;
         // public
         /**
          *Creates an instance of Road.
@@ -9,28 +9,10 @@ module objects {
          * @memberof Road
          */
         constructor(assetManager: createjs.LoadQueue) {
-            super(assetManager.getResult("road"));
+            super(assetManager.getResult("explosionImage"));
             this.Start();
 
-        }
-        // recet object location
-        /**
-         *
-         *
-         * @private
-         * @memberof Road
-         */
-        private _reset(): void {
-            this.y = -1452;
-        }
-        /**
-         *
-         *
-         * @memberof Road
-         */
-        public _move(): void {
-            this.y += this._dy;
-
+           
         }
         /**
          *
@@ -38,9 +20,6 @@ module objects {
          * @memberof Road
          */
         public _checkBounds(): void {
-            if (this.y >= 0) {
-                this._reset();
-            }
         }
         //init var create new object
         /**
@@ -49,8 +28,13 @@ module objects {
          * @memberof Road
          */
         public Start(): void {
-            this._dy = 4;
-            this._reset();
+            var that = this;
+            setTimeout(function(){
+                that.alpha = 0 ;
+            
+            },100);
+
+            
         }
         /**
          *
@@ -58,8 +42,8 @@ module objects {
          * @memberof Road
          */
         public Update(): void {
-            this._move();
-            this._checkBounds();
+
         }
+        
     }
 }

@@ -15,20 +15,6 @@ var objects;
 (function (objects) {
     var Label = /** @class */ (function (_super) {
         __extends(Label, _super);
-        // Private Instace variables 
-        //public properties 
-        //Constructor
-        /**
-         *Creates an instance of Label.
-         * @param {string} labelString
-         * @param {string} fontSize
-         * @param {string} fontFamily
-         * @param {string} fontColour
-         * @param {number} [x=0]
-         * @param {number} [y=0]
-         * @param {boolean} [isCentered=false]
-         * @memberof Label
-         */
         function Label(labelString, fontSize, fontFamily, fontColour, x, y, isCentered) {
             if (x === void 0) { x = 0; }
             if (y === void 0) { y = 0; }
@@ -40,8 +26,20 @@ var objects;
             }
             _this.x = x;
             _this.y = y;
+            _this._originalScale = _this.scaleX;
             return _this;
         }
+        Label.prototype.Update = function () {
+            //alert("inside update");
+            /*while(this.scaleX<2)
+            {
+                this.scaleX+=0.5;
+            }
+            while(this.scaleX>this._originalScale)
+            {
+                this.scaleX-=0.5;
+            }*/
+        };
         return Label;
     }(createjs.Text));
     objects.Label = Label;

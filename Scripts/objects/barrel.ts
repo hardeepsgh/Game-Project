@@ -72,7 +72,7 @@ module objects {
          * @memberof Barrel
          */
         public Start(): void {
-            this._dy = 2;
+            this._dy = 4;
         }
         public Update(): void {
             this.Move();

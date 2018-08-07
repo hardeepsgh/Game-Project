@@ -13,46 +13,25 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var objects;
 (function (objects) {
-    var Road = /** @class */ (function (_super) {
-        __extends(Road, _super);
+    var Explosion = /** @class */ (function (_super) {
+        __extends(Explosion, _super);
         // public
         /**
          *Creates an instance of Road.
          * @param {createjs.LoadQueue} assetManager
          * @memberof Road
          */
-        function Road(assetManager) {
-            var _this = _super.call(this, assetManager.getResult("road")) || this;
+        function Explosion(assetManager) {
+            var _this = _super.call(this, assetManager.getResult("explosionImage")) || this;
             _this.Start();
             return _this;
         }
-        // recet object location
-        /**
-         *
-         *
-         * @private
-         * @memberof Road
-         */
-        Road.prototype._reset = function () {
-            this.y = -1452;
-        };
         /**
          *
          *
          * @memberof Road
          */
-        Road.prototype._move = function () {
-            this.y += this._dy;
-        };
-        /**
-         *
-         *
-         * @memberof Road
-         */
-        Road.prototype._checkBounds = function () {
-            if (this.y >= 0) {
-                this._reset();
-            }
+        Explosion.prototype._checkBounds = function () {
         };
         //init var create new object
         /**
@@ -60,21 +39,21 @@ var objects;
          *
          * @memberof Road
          */
-        Road.prototype.Start = function () {
-            this._dy = 4;
-            this._reset();
+        Explosion.prototype.Start = function () {
+            var that = this;
+            setTimeout(function () {
+                that.alpha = 0;
+            }, 100);
         };
         /**
          *
          *
          * @memberof Road
          */
-        Road.prototype.Update = function () {
-            this._move();
-            this._checkBounds();
+        Explosion.prototype.Update = function () {
         };
-        return Road;
+        return Explosion;
     }(createjs.Bitmap));
-    objects.Road = Road;
+    objects.Explosion = Explosion;
 })(objects || (objects = {}));
-//# sourceMappingURL=road.js.map
+//# sourceMappingURL=explosions.js.map

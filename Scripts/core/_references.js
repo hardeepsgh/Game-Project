@@ -11,6 +11,7 @@
 /// <reference path="../../Scripts/objects/car.ts"/>
 /// <reference path="../../Scripts/objects/barrel.ts"/>
 /// <reference path="../../Scripts/objects/roadblock.ts"/>
+/// <reference path="../../Scripts/objects/explosions.ts"/>
 /// <reference path="../../Scripts/scenes/over.ts"/>
 /// <reference path="../../Scripts/scenes/play.ts"/>
 /// <reference path="../../Scripts/scenes/start.ts"/>

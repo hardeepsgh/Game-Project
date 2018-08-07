@@ -16,6 +16,9 @@ module objects {
          * @param {boolean} [isCentered=false]
          * @memberof Label
          */
+
+         private _originalScale:number;
+         
         constructor(labelString: string, fontSize: string, fontFamily: string, fontColour: string, x: number = 0 , y: number = 0 , isCentered: boolean= false) {
             super(labelString,fontSize +" "+ fontFamily,fontColour);
             if(isCentered){
@@ -24,7 +27,19 @@ module objects {
             }
             this.x = x;
             this.y = y ; 
+            this._originalScale=this.scaleX;
+        }
 
+        public Update():void{
+            //alert("inside update");
+            /*while(this.scaleX<2)
+            {
+                this.scaleX+=0.5;            
+            }
+            while(this.scaleX>this._originalScale)
+            {
+                this.scaleX-=0.5;
+            }*/
         }
 
     }

@@ -48,6 +48,7 @@ var scenes;
             }, this);
         };
         StartScene.prototype.Update = function () {
+            // this._welcomeLabel.Update(this);
         };
         return StartScene;
     }(objects.Scene));

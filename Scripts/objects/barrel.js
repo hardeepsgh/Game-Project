@@ -82,7 +82,7 @@ var objects;
          * @memberof Barrel
          */
         Barrel.prototype.Start = function () {
-            this._dy = 2;
+            this._dy = 4;
         };
         Barrel.prototype.Update = function () {
             this.Move();

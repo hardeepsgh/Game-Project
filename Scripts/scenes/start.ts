@@ -26,6 +26,7 @@ module scenes{
         
         public Start():void{
             this._welcomeLabel = new objects.Label("Lane Steer", '70px',"Consolas","#FF0000",200, 70);
+            
             this._startButton = new objects.Button(this.assetManager,"startButton",650, 100);
             this._welcomeImage=new createjs.Bitmap(this.assetManager.getResult("welcomeImage"));  
             
@@ -51,6 +52,8 @@ module scenes{
             }, this);
         }
         public Update():void{
+
+               // this._welcomeLabel.Update(this);
            
         }
         //
