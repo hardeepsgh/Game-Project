@@ -26,10 +26,10 @@
         {        id: "road" ,src: "./Assets/images/road.png"},
         {        id: "car" ,src: "./Assets/images/car1.png"},
         {        id: "car2" ,src: "./Assets/images/car2.png"},
-        {        id: "car3" ,src: "./Assets/images/car3.png"},
+        {        id: "car3" ,src: "./Assets/images/car3resize.png"},
         {        id: "car4" ,src: "./Assets/images/car4.png"},
-        {        id: "car5" ,src: "./Assets/images/car5.png"},
-        {        id: "car6" ,src: "./Assets/images/car6.png"},
+        {        id: "car5" ,src: "./Assets/images/car5resize.png"},
+        {        id: "car6" ,src: "./Assets/images/car6resize.png"},
         {        id: "barrel" ,src: "./Assets/images/barrel.png"},
         {        id: "SettingButton",src:"./Assets/images/SettingButton.png"},
         {        id: "roadblock" ,src: "./Assets/images/roadblock.png"}

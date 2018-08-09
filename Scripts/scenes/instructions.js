@@ -32,7 +32,7 @@ var scenes;
             this._welcomeImage = new createjs.Bitmap(this.assetManager.getResult("welcomeImage"));
             this._welcomeImage.scaleX = 0.68;
             this._welcomeImage.scaleY = 0.8;
-            this._gameNameLabel = new objects.Label("Instructions For Lane Steer Game", "30px", "Arial", "#FFFF00", 400, 30, true);
+            this._gameNameLabel = new objects.Label("Instructions For Maneuver Driving", "30px", "Arial", "#FFFF00", 400, 30, true);
             this._backButton = new objects.Button(this.assetManager, "backButton", 300, 520);
             this._instructions = "A. How to Play\n\n";
             this._instructions += "1. Controls\n\n \t\to A(MoveLeft) or Left Arrow Key\n\n \t\to D(MoveRight) or Right Arrow Key\n\n";

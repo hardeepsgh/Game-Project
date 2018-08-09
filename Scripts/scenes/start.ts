@@ -27,7 +27,7 @@ module scenes{
         }
         
         public Start():void{
-            this._welcomeLabel = new objects.Label("Maneuver Driving", '70px',"Consolas","#FF0000",200, 70);
+            this._welcomeLabel = new objects.Label("Maneuver Driving", '70px',"Consolas","#FF0000",120, 5);
             
             this._startButton = new objects.Button(this.assetManager,"startButton",620, 100);
             
