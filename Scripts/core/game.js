@@ -27,7 +27,7 @@
         { id: "car4", src: "./Assets/images/car4.png" },
         { id: "car5", src: "./Assets/images/car5resize.png" },
         { id: "car6", src: "./Assets/images/car6resize.png" },
-        { id: "barrel", src: "./Assets/images/barrel.png" },
+        { id: "barrel", src: "./Assets/images/coin.png" },
         { id: "SettingButton", src: "./Assets/images/SettingButton.png" },
         { id: "roadblock", src: "./Assets/images/roadblock.png" }
     ];

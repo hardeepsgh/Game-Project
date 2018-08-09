@@ -80,7 +80,7 @@ var managers;
             this.ScoreLabel = new objects.Label("Score : 99999", "20px", "Consolas", "#FFFF00", 500, 10, false);
             this.HighScoreLabel = new objects.Label("High Score : 99999", "40px", "Consolas", "#FFFF00", 320, 240, false);
             this.Lives = 5;
-            this.Score = 9999;
+            this.Score = 0;
         };
         return Scoreboard;
     }());

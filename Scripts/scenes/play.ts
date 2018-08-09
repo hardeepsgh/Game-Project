@@ -74,7 +74,9 @@ public Init():void{
                 (this._barrel.y - this._roadblock.y > -50 || this._barrel.y - this._roadblock.y < 50)) {
 
                this._barrel.y = this._barrel.y - 100;
-                }        
+            }   
+                
+                
                 
                 this._barrel1.y = this._barrel.y -150 ;
                 this._roadblock1.y = this._barrel.y -150 ;

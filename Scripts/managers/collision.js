@@ -41,16 +41,16 @@ var managers;
                             break;
                         case "barrel":
                             console.log("inside barel ");
-                            objects.Game.scoreboard.Score -= 10;
-                            objects.Game.scoreboard.Lives -= 1;
+                            objects.Game.scoreboard.Score += 10;
+                            //  objects.Game.scoreboard.Lives -= 1;
                             var explosion1 = new objects.Explosion(currentScene.assetManager);
                             explosion1.x = object1.x - object1.halfWidth;
                             explosion1.y = object1.y - object1.halfHeight;
-                            currentScene.addChild(explosion1);
-                            object2._dy = (object2._dy * -1);
-                            setTimeout(function () {
-                                object2.alpha = 0;
-                            }, 100);
+                            //currentScene.addChild(explosion1);                            
+                            //object2._dy=(object2._dy*-1);
+                            //setTimeout(function(){
+                            object2.alpha = 0;
+                            //},100);                            
                             break;
                     }
                 }
