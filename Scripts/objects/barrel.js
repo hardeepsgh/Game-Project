@@ -82,7 +82,16 @@ var objects;
          * @memberof Barrel
          */
         Barrel.prototype.Start = function () {
-            this._dy = 4;
+            // this._dy = 4;
+            if (objects.Game.levelSelected == "level1") {
+                this._dy = 3;
+            }
+            if (objects.Game.levelSelected == "level2") {
+                this._dy = 4;
+            }
+            if (objects.Game.levelSelected == "level3") {
+                this._dy = 5;
+            }
         };
         Barrel.prototype.Update = function () {
             this.Move();

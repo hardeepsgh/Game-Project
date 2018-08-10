@@ -23,7 +23,7 @@ var objects;
          * @memberof Car
          */
         function Car(assetManager) {
-            var _this = _super.call(this, assetManager, "car") || this;
+            var _this = _super.call(this, assetManager, objects.Game.carselected) || this;
             _this.Start();
             _this.y = 540;
             _this.x = 200;

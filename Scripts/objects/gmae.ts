@@ -11,6 +11,9 @@ module objects{
         public static currentScene : number;
         public static keyboardManager:managers.Keyboard;
         public static scoreboard :managers.Scoreboard;
+        public static carselected:string;
+        public static levelSelected:string;
+                
 
     }
 }

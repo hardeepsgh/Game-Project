@@ -31,7 +31,21 @@ module managers {
                     switch (object2.name) {
                         case "roadblock":
                             console.log("inside road block ");
-                            objects.Game.scoreboard.Score -= 10;
+                            //  this._dy = 4;
+                            if(objects.Game.levelSelected=="level1")
+                            {
+                                objects.Game.scoreboard.Score -= 10;
+                            }
+                            if(objects.Game.levelSelected=="level2")
+                            {
+                                objects.Game.scoreboard.Score -= 20;
+                            }
+                            if(objects.Game.levelSelected=="level3")
+                            {
+                                objects.Game.scoreboard.Score -= 30;
+                            }
+                            
+
                             objects.Game.scoreboard.Lives -= 1;
                             let explosion=new objects.Explosion(currentScene.assetManager);
                             explosion.x=object1.x-object1.halfWidth;
@@ -41,11 +55,25 @@ module managers {
                             setTimeout(function(){
                                 object2.alpha=0;
                             },100);  
-
+                            
                             break;
                         case "barrel":
                             console.log("inside barel ");
-                            objects.Game.scoreboard.Score += 10;
+                            //objects.Game.scoreboard.Score += 10;
+
+                            if(objects.Game.levelSelected=="level1")
+                            {
+                                objects.Game.scoreboard.Score += 10;
+                            }
+                            if(objects.Game.levelSelected=="level2")
+                            {
+                                objects.Game.scoreboard.Score += 20;
+                            }
+                            if(objects.Game.levelSelected=="level3")
+                            {
+                                objects.Game.scoreboard.Score += 30;
+                            }
+
                           //  objects.Game.scoreboard.Lives -= 1;
                             
                             let explosion1=new objects.Explosion(currentScene.assetManager);

@@ -21,7 +21,10 @@
         {        id: "backButton" ,src: "./Assets/images/BackButton.png"},
         {        id: "explosionImage" ,src: "./Assets/images/explosion1.png"},        
         {        id: "InstructionButton" ,src: "./Assets/images/instructions.png"},        
-        {        id: "nextButton" ,src: "./Assets/images/NextButton.png"},
+        {        id: "nextButton" ,src: "./Assets/images/NextButton.png"},        
+        {        id: "level1" ,src: "./Assets/images/level1.png"},        
+        {        id: "level2" ,src: "./Assets/images/level2.png"},        
+        {        id: "level3" ,src: "./Assets/images/level3.png"},
         {        id: "welcomeImage" ,src: "./Assets/images/mainImage.jpg"}, 
         {        id: "road" ,src: "./Assets/images/road.png"},
         {        id: "car" ,src: "./Assets/images/car1.png"},
@@ -67,6 +70,8 @@
         keyboardManager=new managers.Keyboard;
         objects.Game.keyboardManager=keyboardManager;
 
+        objects.Game.carselected="car";
+        objects.Game.levelSelected="level1";
         
         Main();
     }
