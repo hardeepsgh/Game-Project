@@ -31,7 +31,6 @@ module managers {
                     switch (object2.name) {
                         case "roadblock":
                             console.log("inside road block ");
-                            //  this._dy = 4;
                             if(objects.Game.levelSelected=="level1")
                             {
                                 objects.Game.scoreboard.Score -= 10;

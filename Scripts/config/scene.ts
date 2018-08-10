@@ -6,6 +6,7 @@ module config{
         PLAY,
         OVER,
         INSTRUCTION,
-        SETTINGS
+        SETTINGS,
+        LEVELCHANGE
     }
 }

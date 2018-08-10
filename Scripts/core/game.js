@@ -18,6 +18,7 @@
         { id: "backButton", src: "./Assets/images/BackButton.png" },
         { id: "explosionImage", src: "./Assets/images/explosion1.png" },
         { id: "InstructionButton", src: "./Assets/images/instructions.png" },
+        { id: "RestartButton", src: "./Assets/images/restart.png" },
         { id: "nextButton", src: "./Assets/images/NextButton.png" },
         { id: "level1", src: "./Assets/images/level1.png" },
         { id: "level2", src: "./Assets/images/level2.png" },
@@ -118,26 +119,11 @@
             case config.Scene.SETTINGS:
                 currentScene = new scenes.Settings(assetManager);
                 break;
+            case config.Scene.LEVELCHANGE:
+                currentScene = new scenes.LevelChange(assetManager);
         }
         currentState = objects.Game.currentScene;
         stage.addChild(currentScene);
-        // console.log("Game Starting ");
-        // helloLabel = new objects.Label("Hello,World " , "40px", "Consolas" , "#000000", 320,240,true);
-        // console.log(helloLabel);
-        // stage.addChild(helloLabel);
-        // clickMeButton = new objects.Button(assetManager,"clickMeButton",320,340);
-        // stage.addChild(clickMeButton);
-        // clickMeButton.on("click" , clickMeButtonMouseClick);
-        // helloLabel.x =  200;
-        // helloLabel.y =  200;
-        // helloLabel.regX = helloLabel.getMeasuredWidth() *0.5;
-        // helloLabel.regY = helloLabel.getMeasuredHeight() *0.5;
-        // clickMeButton.regX  = clickMeButton.getBounds().width * 0.5;
-        // clickMeButton.regY  = clickMeButton.getBounds().height * 0.5;
-        // clickMeButton.x = 320 ;
-        // clickMeButton.y = 340 ;
-        // clickMeButton.on("mouseover" , clickMeButtonMouseOver);
-        // clickMeButton.on("mouseout" , clickMeButtonMouseOut);
     }
     window.onload = Init;
 })();

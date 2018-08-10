@@ -151,10 +151,36 @@ public Init():void{
            managers.Collision.Check(that._road,that._car,that._roadblock1,that);
            managers.Collision.Check(that._road,that._car,that._roadblock2,that);
         },1000);
-           if(this._scoreBoard.Lives<=0)
-           {
+           
+        if(this._scoreBoard.Lives<=0 || this._scoreBoard.Score<0)
+        {
                objects.Game.currentScene=config.Scene.OVER;
+        }
+           
+        if(objects.Game.levelSelected=="level1")
+        {
+           if(this._scoreBoard.Score>=150)
+           {
+            objects.Game.currentScene=config.Scene.LEVELCHANGE;
            }
+        }
+
+        if(objects.Game.levelSelected=="level2")
+        {
+           if(this._scoreBoard.Score>=300)
+           {
+            objects.Game.currentScene=config.Scene.LEVELCHANGE;
+           }
+        }
+
+        if(objects.Game.levelSelected=="level3")
+        {
+           if(this._scoreBoard.Score>=600)
+           {
+            objects.Game.currentScene=config.Scene.LEVELCHANGE;
+           }
+        }
+
 
         }
     }
