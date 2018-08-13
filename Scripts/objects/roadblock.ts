@@ -66,9 +66,9 @@ module objects {
                 this.Reset();
             }
 
-            if (this.x <= this.halfWidth + 145) {
-                this.x = 145 + this.halfWidth;
-            }
+            // if (this.x <= this.halfWidth + 145) {
+            //     this.x = 145 + this.halfWidth;
+            // }
         }
         //init var create new object
         public Start(): void {

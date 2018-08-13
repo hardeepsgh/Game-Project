@@ -185,7 +185,7 @@ public Init():void{
            
         if(objects.Game.levelSelected=="level1")
         {
-           if(this._scoreBoard.Score>=10000)
+           if(this._scoreBoard.Score>=1000)
            {
             objects.Game.currentScene=config.Scene.LEVELCHANGE;
            }
@@ -193,7 +193,7 @@ public Init():void{
 
         if(objects.Game.levelSelected=="level2")
         {
-           if(this._scoreBoard.Score>=20000)
+           if(this._scoreBoard.Score>=2000)
            {
             objects.Game.currentScene=config.Scene.LEVELCHANGE;
            }
@@ -201,7 +201,7 @@ public Init():void{
 
         if(objects.Game.levelSelected=="level3")
         {
-           if(this._scoreBoard.Score>=30000)
+           if(this._scoreBoard.Score>=3000)
            {
             objects.Game.currentScene=config.Scene.LEVELCHANGE;
            }
