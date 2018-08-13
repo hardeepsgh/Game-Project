@@ -79,6 +79,12 @@ module objects {
 
             if (this.x <= this.halfWidth + 145) {
                 this.x = 145 + this.halfWidth;
+                this._dx =-1* this._dx;
+            }
+
+            if (this.x >= 700 - this.halfWidth) {
+                this.x = 700 - this.halfWidth;
+                this._dx =-1* this._dx;
             }
         }
         //init var create new object

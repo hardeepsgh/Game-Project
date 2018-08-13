@@ -29,46 +29,56 @@ var managers;
                     switch (object2.name) {
                         case "roadblock":
                             console.log("inside road block ");
-                            if (objects.Game.levelSelected == "level1") {
-                                if (object1.name == "barrel") {
-                                    objects.Game.scoreboard.Score += 10;
+                            if (!object2.ignoreCollision) {
+                                if (objects.Game.levelSelected == "level1") {
+                                    if (object1.name == "barrel") {
+                                        objects.Game.scoreboard.Score += 10;
+                                    }
+                                    else {
+                                        objects.Game.scoreboard.Score -= 2;
+                                    }
                                 }
-                                else {
-                                    objects.Game.scoreboard.Score -= 2;
+                                if (objects.Game.levelSelected == "level2") {
+                                    if (object1.name == "barrel") {
+                                        objects.Game.scoreboard.Score += 10;
+                                    }
+                                    else {
+                                        objects.Game.scoreboard.Score -= 4;
+                                    }
                                 }
+                                if (objects.Game.levelSelected == "level3") {
+                                    if (object1.name == "barrel") {
+                                        objects.Game.scoreboard.Score += 10;
+                                    }
+                                    else {
+                                        objects.Game.scoreboard.Score -= 6;
+                                    }
+                                }
+                                if (object1.name == "car") {
+                                    objects.Game.scoreboard.Lives -= 1;
+                                }
+                                var explosion = new objects.Explosion(currentScene.assetManager);
+                                explosion.x = object1.x;
+                                explosion.y = object1.y - object1.halfHeight;
+                                explosion.regX = explosion.getBounds().width / 2;
+                                explosion.regY = explosion.getBounds().height / 2;
+                                currentScene.addChild(explosion);
+                                object2._dy = (object2._dy * -1);
+                                sign = ((object2.x - object1.x) / Math.abs(object2.x - object1.x));
+                                if (sign == NaN) {
+                                    object2._dx = 0;
+                                    object2._dr = 0;
+                                }
+                                object2._dx = 2 * sign;
+                                object2._dr = 5 * sign;
+                                object2.ignoreCollision = true;
+                                setTimeout(function () {
+                                    object2.ignoreCollision = false;
+                                }, 300);
+                                setTimeout(function () {
+                                    object2.Reset();
+                                }, 1000);
                             }
-                            if (objects.Game.levelSelected == "level2") {
-                                if (object1.name == "barrel") {
-                                    objects.Game.scoreboard.Score += 10;
-                                }
-                                else {
-                                    objects.Game.scoreboard.Score -= 4;
-                                }
-                            }
-                            if (objects.Game.levelSelected == "level3") {
-                                if (object1.name == "barrel") {
-                                    objects.Game.scoreboard.Score += 10;
-                                }
-                                else {
-                                    objects.Game.scoreboard.Score -= 6;
-                                }
-                            }
-                            if (object1.name == "car") {
-                                objects.Game.scoreboard.Lives -= 1;
-                            }
-                            var explosion = new objects.Explosion(currentScene.assetManager);
-                            explosion.x = object1.x;
-                            explosion.y = object1.y - object1.halfHeight;
-                            explosion.regX = explosion.getBounds().width / 2;
-                            explosion.regY = explosion.getBounds().height / 2;
-                            currentScene.addChild(explosion);
-                            object2._dy = (object2._dy * -1);
-                            sign = ((object2.x - object1.x) / Math.abs(object2.x - object1.x));
-                            object2._dx = 2 * sign;
-                            object2._dr = 2 * sign;
-                            setTimeout(function () {
-                                object2.Reset();
-                            }, 500);
                             break;
                         case "barrel":
                             console.log("inside barel ");
@@ -95,7 +105,7 @@ var managers;
                             object2._dr = 2 * sign;
                             setTimeout(function () {
                                 object2.Reset();
-                            }, 1500);
+                            }, 1000);
                             break;
                     }
                 }

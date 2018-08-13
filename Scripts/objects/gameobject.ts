@@ -11,6 +11,7 @@
          public halfWidth:number;
          public halfHeight :number;
          public isColliding :boolean;
+         public  ignoreCollision:boolean; 
          
 
          /**
@@ -44,6 +45,7 @@
                 this.regX = this.halfWidth;
                 this.regY = this.halfHeight;
                 this.isColliding = false ;
+                this.ignoreCollision = false;
          }
          // public
          /**

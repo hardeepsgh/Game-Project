@@ -41,6 +41,7 @@ var objects;
             this.regX = this.halfWidth;
             this.regY = this.halfHeight;
             this.isColliding = false;
+            this.ignoreCollision = false;
         };
         // public
         /**

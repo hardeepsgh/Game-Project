@@ -1,10 +1,12 @@
 module objects {
     export class Roadblock extends objects.GameObject {
         // private
+ 
         // public
 
         constructor(assetManager: createjs.LoadQueue) {
             super(assetManager, "roadblock");
+           
             this.Start();
             this.y = 600;
             this.x =  (this.randomInt(0, 3) * 125) + 230;
