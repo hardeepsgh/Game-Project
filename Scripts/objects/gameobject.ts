@@ -3,6 +3,7 @@
          // private
          public _dx :number;
          public _dy :number;
+         public _dr :number;
 
          // public
          public width :number;
@@ -63,6 +64,9 @@
          public Move():void{
 
          }
+         public Rotate():void{
+
+        }
          public CheckBounds():void{
 
          }

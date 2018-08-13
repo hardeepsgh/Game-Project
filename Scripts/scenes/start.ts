@@ -27,9 +27,9 @@ module scenes{
         }
         
         public Start():void{
-            this._welcomeLabel = new objects.Label("Maneuver Driving", '70px',"Consolas","#FF0000",200, 70);
+            this._welcomeLabel = new objects.Label("Maneuver Driving", '70px',"Consolas","#FF0000",100, 20);
             
-            this._startButton = new objects.Button(this.assetManager,"startButton",620, 100);
+            this._startButton = new objects.Button(this.assetManager,"startButton",620,150);
             
             this._welcomeImage=new createjs.Bitmap(this.assetManager.getResult("welcomeImage"));  
             
@@ -39,8 +39,8 @@ module scenes{
            this._welcomeImage.scaleX=0.68;
            this._welcomeImage.scaleY=0.8;
            
-            this._settingButton = new objects.Button(this.assetManager,"SettingButton",620, 170);
-            this._instructionButton=new objects.Button(this.assetManager,"InstructionButton",620,240);
+            this._settingButton = new objects.Button(this.assetManager,"SettingButton",620, 220);
+            this._instructionButton=new objects.Button(this.assetManager,"InstructionButton",620,290);
 
 
             this.Main();
@@ -67,6 +67,10 @@ module scenes{
         }
         public Update():void{
            
+        }
+
+        public Destroy():void {
+
         }
         
     }

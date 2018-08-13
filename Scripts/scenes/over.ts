@@ -52,6 +52,10 @@ module scenes{
         public Update():void{
            
         }
+
+        public Destroy():void {
+            this.removeAllChildren();
+        }
         //
     }
 }

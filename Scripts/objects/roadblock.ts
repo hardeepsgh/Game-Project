@@ -17,6 +17,10 @@ module objects {
             this.y = -this.height;
 
             this.x = (this.randomInt(0, 3) * 125) + 230;
+
+            this._dx =0;
+            this._dr = 0;
+            this.rotation = 0;
         }
         private randomInt(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -28,9 +32,16 @@ module objects {
          */
         public Move(): void {
             this.y += this._dy;
-
-
+            this.x += this._dx;
+            this.rotation += this._dr
+           
         }
+
+      
+
+        
+
+
         /**
          *
          *
@@ -48,8 +59,12 @@ module objects {
         //init var create new object
         public Start(): void {
             this._dy = 4;
+            this._dx = 0;
+            this._dr = 0;
+            
         }
         public Update(): void {
+            
             this.Move();
             this.CheckBounds();
         }

@@ -29,7 +29,8 @@
         { id: "car6", src: "./Assets/images/car6.png" },
         { id: "barrel", src: "./Assets/images/barrel.png" },
         { id: "SettingButton", src: "./Assets/images/SettingButton.png" },
-        { id: "roadblock", src: "./Assets/images/roadblock.png" }
+        { id: "roadblock", src: "./Assets/images/roadblock.png" },
+        { id: "car_engine", src: "/Assets/audio/car_engine.ogg" },
     ];
     /**
      *initialize
@@ -94,6 +95,10 @@
      *
      */
     function Main() {
+        if (currentScene) {
+            currentScene.Destroy();
+            stage.removeChild(currentScene);
+        }
         stage.removeAllChildren();
         switch (objects.Game.currentScene) {
             case config.Scene.START:

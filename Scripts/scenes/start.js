@@ -1,10 +1,7 @@
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    }
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -27,15 +24,15 @@ var scenes;
         StartScene.prototype.Init = function () {
         };
         StartScene.prototype.Start = function () {
-            this._welcomeLabel = new objects.Label("Lane Steer", '70px', "Consolas", "#FF0000", 200, 70);
-            this._startButton = new objects.Button(this.assetManager, "startButton", 620, 100);
+            this._welcomeLabel = new objects.Label("Maneuver Driving", '70px', "Consolas", "#FF0000", 100, 20);
+            this._startButton = new objects.Button(this.assetManager, "startButton", 620, 150);
             this._welcomeImage = new createjs.Bitmap(this.assetManager.getResult("welcomeImage"));
             // this._welcomeImage.scaleX=1.4;
             // this._welcomeImage.scaleY=1.5;
             this._welcomeImage.scaleX = 0.68;
             this._welcomeImage.scaleY = 0.8;
-            this._settingButton = new objects.Button(this.assetManager, "SettingButton", 620, 170);
-            this._instructionButton = new objects.Button(this.assetManager, "InstructionButton", 620, 240);
+            this._settingButton = new objects.Button(this.assetManager, "SettingButton", 620, 220);
+            this._instructionButton = new objects.Button(this.assetManager, "InstructionButton", 620, 290);
             this.Main();
         };
         StartScene.prototype.Main = function () {
@@ -53,6 +50,8 @@ var scenes;
             }, this);
         };
         StartScene.prototype.Update = function () {
+        };
+        StartScene.prototype.Destroy = function () {
         };
         return StartScene;
     }(objects.Scene));

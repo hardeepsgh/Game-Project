@@ -1,10 +1,7 @@
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    }
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -46,6 +43,9 @@ var scenes;
             this._roadblock1 = new objects.Roadblock(this.assetManager);
             this._barrel2 = new objects.Barrel(this.assetManager);
             this._roadblock2 = new objects.Roadblock(this.assetManager);
+            this.engineSound = createjs.Sound.play("car_engine");
+            this.engineSound.loop = -1;
+            this.engineSound.volume = 0.1;
             this._scoreBoard = new managers.Scoreboard();
             objects.Game.scoreboard = this._scoreBoard;
             this.Main();
@@ -56,6 +56,10 @@ var scenes;
          * @memberof PlayScene
          */
         PlayScene.prototype.addObstacles = function () {
+        };
+        PlayScene.prototype.Destroy = function () {
+            this.engineSound.stop();
+            this.removeAllChildren();
         };
         /**
          *

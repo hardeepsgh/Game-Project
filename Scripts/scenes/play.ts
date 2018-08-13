@@ -13,7 +13,7 @@ module scenes{
         // private
        
         private _scoreBoard:managers.Scoreboard;
-
+        public engineSound:createjs.AbstractSoundInstance;
 
 
         /**
@@ -48,6 +48,9 @@ public Init():void{
            this._roadblock1 = new objects.Roadblock(this.assetManager);
            this._barrel2 = new objects.Barrel(this.assetManager);
            this._roadblock2 = new objects.Roadblock(this.assetManager);
+           this.engineSound = createjs.Sound.play("car_engine");
+           this.engineSound.loop = -1;
+           this.engineSound.volume = 0.1;
 
            this._scoreBoard=new managers.Scoreboard();
            objects.Game.scoreboard=this._scoreBoard;
@@ -64,6 +67,15 @@ public Init():void{
         {
 
         }
+
+
+
+
+        public Destroy():void {
+            this.engineSound.stop();
+            this.removeAllChildren();
+        }
+
         /**
          *
          *

@@ -1,10 +1,7 @@
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    }
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -40,6 +37,9 @@ var objects;
         Barrel.prototype.Reset = function () {
             this.x = this.x = (this.randomInt(0, 3) * 125) + 230;
             this.y = -this.height;
+            this._dx = 0;
+            this._dr = 0;
+            this.rotation = 0;
         };
         /**
          *
@@ -61,6 +61,7 @@ var objects;
          */
         Barrel.prototype.Move = function () {
             this.y += this._dy;
+            this.x += this._dx;
         };
         /**
          *
@@ -83,6 +84,8 @@ var objects;
          */
         Barrel.prototype.Start = function () {
             this._dy = 4;
+            this._dx = 0;
+            this._dr = 0;
         };
         Barrel.prototype.Update = function () {
             this.Move();

@@ -24,6 +24,9 @@ module objects {
         public Reset(): void {
             this.x = this.x = (this.randomInt(0, 3) * 125) + 230;
             this.y = -this.height;
+            this._dx =0;
+            this._dr = 0;
+            this.rotation = 0;
         }
 
         /**
@@ -47,6 +50,7 @@ module objects {
          */
         public Move(): void {
             this.y += this._dy;
+            this.x += this._dx;
 
         }
 
@@ -73,6 +77,8 @@ module objects {
          */
         public Start(): void {
             this._dy = 4;
+            this._dx = 0;
+            this._dr = 0;
         }
         public Update(): void {
             this.Move();
