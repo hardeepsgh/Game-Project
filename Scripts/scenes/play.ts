@@ -86,7 +86,9 @@ public Init():void{
                 (this._barrel.y - this._roadblock.y > -50 || this._barrel.y - this._roadblock.y < 50)) {
 
                this._barrel.y = this._barrel.y - 100;
-                }        
+            }   
+                
+                
                 
                 this._barrel1.y = this._barrel.y -150 ;
                 this._roadblock1.y = this._barrel.y -150 ;
@@ -127,7 +129,7 @@ public Init():void{
                 that.addChild(that._barrel2);
                 that.addChild(that._roadblock2);
  
-        },1000);
+        });
 
            
         
@@ -145,6 +147,7 @@ public Init():void{
            var that=this;
            setTimeout(function()
            {
+              
             that._barrel.Update()
             that._barrel1.Update()
             that._barrel2.Update()
@@ -160,11 +163,50 @@ public Init():void{
            managers.Collision.Check(that._road,that._car,that._roadblock,that);
            managers.Collision.Check(that._road,that._car,that._roadblock1,that);
            managers.Collision.Check(that._road,that._car,that._roadblock2,that);
-        },1000);
-           if(this._scoreBoard.Lives<=0)
-           {
+
+           //check collision between barrel and roadblock
+           managers.Collision.Check(that._road,that._barrel,that._roadblock, that);
+           managers.Collision.Check(that._road,that._barrel1,that._roadblock,that);
+           managers.Collision.Check(that._road,that._barrel2,that._roadblock,that);
+
+           managers.Collision.Check(that._road,that._barrel,that._roadblock1, that);
+           managers.Collision.Check(that._road,that._barrel1,that._roadblock1,that);
+           managers.Collision.Check(that._road,that._barrel2,that._roadblock1,that);
+
+           managers.Collision.Check(that._road,that._barrel,that._roadblock2, that);
+           managers.Collision.Check(that._road,that._barrel1,that._roadblock2,that);
+           managers.Collision.Check(that._road,that._barrel2,that._roadblock2,that);
+        },3000);
+           
+        if(this._scoreBoard.Lives<=0 || this._scoreBoard.Score<0)
+        {
                objects.Game.currentScene=config.Scene.OVER;
+        }
+           
+        if(objects.Game.levelSelected=="level1")
+        {
+           if(this._scoreBoard.Score>=10000)
+           {
+            objects.Game.currentScene=config.Scene.LEVELCHANGE;
            }
+        }
+
+        if(objects.Game.levelSelected=="level2")
+        {
+           if(this._scoreBoard.Score>=20000)
+           {
+            objects.Game.currentScene=config.Scene.LEVELCHANGE;
+           }
+        }
+
+        if(objects.Game.levelSelected=="level3")
+        {
+           if(this._scoreBoard.Score>=30000)
+           {
+            objects.Game.currentScene=config.Scene.LEVELCHANGE;
+           }
+        }
+
 
         }
     }

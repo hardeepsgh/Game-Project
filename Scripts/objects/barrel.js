@@ -40,6 +40,15 @@ var objects;
             this._dx = 0;
             this._dr = 0;
             this.rotation = 0;
+            if (objects.Game.levelSelected == "level1") {
+                this._dy = 3;
+            }
+            if (objects.Game.levelSelected == "level2") {
+                this._dy = 4;
+            }
+            if (objects.Game.levelSelected == "level3") {
+                this._dy = 5;
+            }
         };
         /**
          *
@@ -86,6 +95,16 @@ var objects;
             this._dy = 4;
             this._dx = 0;
             this._dr = 0;
+            // this._dy = 4;
+            if (objects.Game.levelSelected == "level1") {
+                this._dy = 3;
+            }
+            if (objects.Game.levelSelected == "level2") {
+                this._dy = 4;
+            }
+            if (objects.Game.levelSelected == "level3") {
+                this._dy = 5;
+            }
         };
         Barrel.prototype.Update = function () {
             this.Move();

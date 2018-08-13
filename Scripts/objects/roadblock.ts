@@ -15,7 +15,19 @@ module objects {
         public Reset(): void {
             // this.x = Math.floor((Math.random()* (840-this.width))+this.halfWidth);
             this.y = -this.height;
-
+            if(objects.Game.levelSelected=="level1")
+            {
+                this._dy = 3;
+            }
+            if(objects.Game.levelSelected=="level2")
+            {
+                this._dy = 4;
+            }
+            if(objects.Game.levelSelected=="level3")
+            {
+                this._dy = 5;
+            }
+         
             this.x = (this.randomInt(0, 3) * 125) + 230;
 
             this._dx =0;
@@ -62,6 +74,20 @@ module objects {
             this._dx = 0;
             this._dr = 0;
             
+          //  this._dy = 4;
+
+          if(objects.Game.levelSelected=="level1")
+          {
+                  this._dy=3;
+          }
+          if(objects.Game.levelSelected=="level2")
+          {
+              this._dy=4;
+          }
+          if(objects.Game.levelSelected=="level3")
+          {
+              this._dy=5;
+          }
         }
         public Update(): void {
             

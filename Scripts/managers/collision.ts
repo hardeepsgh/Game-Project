@@ -32,8 +32,37 @@ module managers {
                     switch (object2.name) {
                         case "roadblock":
                             console.log("inside road block ");
-                            objects.Game.scoreboard.Score -= 10;
-                            objects.Game.scoreboard.Lives -= 1;
+                            if(objects.Game.levelSelected=="level1")
+                            {
+                                if(object1.name == "barrel"){
+                                    objects.Game.scoreboard.Score += 10;
+                                }else{
+                                    objects.Game.scoreboard.Score -= 2;
+                                }
+                            }
+                            if(objects.Game.levelSelected=="level2")
+                            {
+                                if(object1.name == "barrel"){
+                                    objects.Game.scoreboard.Score += 10;
+                                }else{
+                                    objects.Game.scoreboard.Score -= 4;
+                                }
+                            }
+                            if(objects.Game.levelSelected=="level3")
+                            {
+                                if(object1.name == "barrel"){
+                                    objects.Game.scoreboard.Score += 10;
+                                }else{
+                                    objects.Game.scoreboard.Score -= 6;
+                                }
+                            }
+                            
+
+                            if(object1.name == "car"){
+                                objects.Game.scoreboard.Lives -= 1;
+                            }
+
+                            
                             let explosion=new objects.Explosion(currentScene.assetManager);
                             explosion.x=object1.x;
                             explosion.y=object1.y-object1.halfHeight;
@@ -51,8 +80,22 @@ module managers {
                             break;
                         case "barrel":
                             console.log("inside barel ");
-                            objects.Game.scoreboard.Score -= 10;
-                            objects.Game.scoreboard.Lives -= 1;
+                            //objects.Game.scoreboard.Score += 10;
+
+                            if(objects.Game.levelSelected=="level1")
+                            {
+                                objects.Game.scoreboard.Score += 10;
+                            }
+                            if(objects.Game.levelSelected=="level2")
+                            {
+                                objects.Game.scoreboard.Score += 20;
+                            }
+                            if(objects.Game.levelSelected=="level3")
+                            {
+                                objects.Game.scoreboard.Score += 30;
+                            }
+
+                          //  objects.Game.scoreboard.Lives -= 1;
                             
                             let explosion1=new objects.Explosion(currentScene.assetManager);
                             explosion1.x=object1.x;
@@ -69,8 +112,9 @@ module managers {
 
                             setTimeout(function(){
                                 object2.Reset();
-                            },500);                            
+                            },1500);                            
                             
+
                             break;
                     }
                 }

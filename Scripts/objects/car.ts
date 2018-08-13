@@ -7,8 +7,8 @@ module objects {
          * @param {createjs.LoadQueue} assetManager
          * @memberof Car
          */
-        constructor(assetManager: createjs.LoadQueue) {
-            super(assetManager, "car");
+        constructor(assetManager: createjs.LoadQueue) {            
+            super(assetManager, objects.Game.carselected);
             this.Start();
             this.y = 540;
             this.x = 200;

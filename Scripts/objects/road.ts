@@ -10,6 +10,9 @@ module objects {
          */
         constructor(assetManager: createjs.LoadQueue) {
             super(assetManager.getResult("road"));
+
+            
+
             this.Start();
 
         }
@@ -49,7 +52,19 @@ module objects {
          * @memberof Road
          */
         public Start(): void {
-            this._dy = 4;
+          //  this._dy = 4;
+          if(objects.Game.levelSelected=="level1")
+            {
+                    this._dy=3;
+            }
+            if(objects.Game.levelSelected=="level2")
+            {
+                this._dy=4;
+            }
+            if(objects.Game.levelSelected=="level3")
+            {
+                this._dy=5;
+            }
             this._reset();
         }
         /**
